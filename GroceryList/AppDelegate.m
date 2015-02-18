@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Recipes.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,52 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    Recipes *firstRecipe = [[Recipes alloc] initWithName:@"Oven Roasted Chicken"
+//                                          andIngredients:@{@"White Wine":@"1 cup",
+//                                                           @"Whole Chicken":@"1",
+//                                                           @"Lemon":@"1"}
+//                                           andDirections:@"1.  Rub salt and pepper over chicken.  \n2.Throw it in the oven.  \n3.  ??? \n4.  Profit"];
+//    Recipes *secondRecipe = [[Recipes alloc] initWithName:@"Bulgogi"
+//                                           andIngredients:@{@"Soy Sauce":@"1 cup",
+//                                                            @"Green Onions":@"1",
+//                                                            @"Sesame Oil":@"1/2 cup",
+//                                                            @"Flank Steak":@"1 lb."}
+//                                            andDirections:@"1.  Chop up green onions up.  Slice steak.  \n2. Combine oil, sliced steak, soy sauce, and onions.  \n3.  ??? \n4.  Profit"];
+//    Recipes *thirdRecipe = [[Recipes alloc] initWithName:@"Spaghetti with Meat Sauce"
+//                                          andIngredients:@{@"Tomatoes":@"2",
+//                                                           @"Tomato Sauce":@"3 cups",
+//                                                           @"Ground Beef":@"1 lb."}
+//                                           andDirections:@"1.  Chop tomatoes.  \n2.Boil spaghetti.  \n3.  ??? \n4.  Profit"];
+//    Recipes *fourthRecipe = [[Recipes alloc] initWithName:@"Lasagna"
+//                                           andIngredients:@{@"Ground Beef":@"1 lb.",
+//                                                            @"Lasagna pasta sheets":@"1 box",
+//                                                            @"Tomato Sauce":@"2 cups",
+//                                                            @"Bechamel Sauce":@"2 cups"}
+//                                            andDirections:@"1.  Chop tomatoes.  \n2.Boil lasagna sheets.  \n3.  ??? \n4.  Profit"];
+//    Recipes *fifthRecipe = [[Recipes alloc] initWithName:@"Caesar Salad"
+//                                          andIngredients:@{@"Tomatoes":@"1",
+//                                                           @"Chicken Breast":@"1 lb.",
+//                                                           @"Caesar Dressing":@"1 tablespoon"}
+//                                           andDirections:@"1.  Chop tomatoes.  \n2.Grill chicken.  \n3.  ??? \n4.  Profit"];
+//    Recipes *sixthRecipe = [[Recipes alloc] initWithName:@"Chicken Parmesan"
+//                                          andIngredients:@{@"Tomatoes":@"1",
+//                                                           @"Chicken Breast":@"1 lb.",
+//                                                           @"Grated Parmesan Cheese":@"1 cup",
+//                                                           @"Breading":@"1 cup"}
+//                                           andDirections:@"1.  Chop tomatoes.  \n2.Bread chicken.  \n3.  ??? \n4.  Profit"];
+//    Recipes *seventhRecipe = [[Recipes alloc] initWithName:@"Steak"
+//                                            andIngredients:@{@"Flank Steak":@"1 lb.",
+//                                                             @"Butter":@"1 tablespoon",
+//                                                             @"Garlic":@"1 clove"}
+//                                             andDirections:@"1.  Chop garlic.  \n2.Pan sear steak.  \n3.  ??? \n4.  Profit"];
+//    
+//    self.recipeList = [[NSArray alloc] initWithObjects:firstRecipe, secondRecipe, thirdRecipe, fourthRecipe, fifthRecipe, sixthRecipe, seventhRecipe, nil];
+//    
+//    Recipes *tempRecipe = self.recipeList[0];
+//    NSLog(@"%@",[tempRecipe.ingredients objectForKey:@"White Wine"]);
+    
+    
     return YES;
 }
 

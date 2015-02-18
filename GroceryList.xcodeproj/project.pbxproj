@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		36BBC9141A94F7CC001BBA5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9131A94F7CC001BBA5F /* main.m */; };
 		36BBC9171A94F7CC001BBA5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9161A94F7CC001BBA5F /* AppDelegate.m */; };
-		36BBC91A1A94F7CC001BBA5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9191A94F7CC001BBA5F /* ViewController.m */; };
 		36BBC91D1A94F7CC001BBA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36BBC91B1A94F7CC001BBA5F /* Main.storyboard */; };
 		36BBC91F1A94F7CC001BBA5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BBC91E1A94F7CC001BBA5F /* Images.xcassets */; };
 		36BBC9221A94F7CC001BBA5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BBC9201A94F7CC001BBA5F /* LaunchScreen.xib */; };
 		36BBC92E1A94F7CD001BBA5F /* GroceryListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC92D1A94F7CD001BBA5F /* GroceryListTests.m */; };
+		36BBC9391A94F7FD001BBA5F /* Recipes.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9381A94F7FD001BBA5F /* Recipes.m */; };
+		36BBC93C1A951B7B001BBA5F /* RecipeListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC93B1A951B7B001BBA5F /* RecipeListTableViewController.m */; };
+		36BBC9421A952B43001BBA5F /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9411A952B43001BBA5F /* RecipeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		36BBC9131A94F7CC001BBA5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36BBC9151A94F7CC001BBA5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36BBC9161A94F7CC001BBA5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		36BBC9181A94F7CC001BBA5F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		36BBC9191A94F7CC001BBA5F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		36BBC91C1A94F7CC001BBA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36BBC91E1A94F7CC001BBA5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		36BBC9211A94F7CC001BBA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		36BBC9271A94F7CD001BBA5F /* GroceryListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BBC92C1A94F7CD001BBA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36BBC92D1A94F7CD001BBA5F /* GroceryListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryListTests.m; sourceTree = "<group>"; };
+		36BBC9371A94F7FD001BBA5F /* Recipes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipes.h; sourceTree = "<group>"; };
+		36BBC9381A94F7FD001BBA5F /* Recipes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipes.m; sourceTree = "<group>"; };
+		36BBC93A1A951B7B001BBA5F /* RecipeListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeListTableViewController.h; sourceTree = "<group>"; };
+		36BBC93B1A951B7B001BBA5F /* RecipeListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeListTableViewController.m; sourceTree = "<group>"; };
+		36BBC9401A952B43001BBA5F /* RecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
+		36BBC9411A952B43001BBA5F /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,8 @@
 		36BBC9051A94F7CC001BBA5F = {
 			isa = PBXGroup;
 			children = (
+				36BBC9371A94F7FD001BBA5F /* Recipes.h */,
+				36BBC9381A94F7FD001BBA5F /* Recipes.m */,
 				36BBC9101A94F7CC001BBA5F /* GroceryList */,
 				36BBC92A1A94F7CD001BBA5F /* GroceryListTests */,
 				36BBC90F1A94F7CC001BBA5F /* Products */,
@@ -83,12 +91,14 @@
 			children = (
 				36BBC9151A94F7CC001BBA5F /* AppDelegate.h */,
 				36BBC9161A94F7CC001BBA5F /* AppDelegate.m */,
-				36BBC9181A94F7CC001BBA5F /* ViewController.h */,
-				36BBC9191A94F7CC001BBA5F /* ViewController.m */,
 				36BBC91B1A94F7CC001BBA5F /* Main.storyboard */,
 				36BBC91E1A94F7CC001BBA5F /* Images.xcassets */,
 				36BBC9201A94F7CC001BBA5F /* LaunchScreen.xib */,
 				36BBC9111A94F7CC001BBA5F /* Supporting Files */,
+				36BBC93A1A951B7B001BBA5F /* RecipeListTableViewController.h */,
+				36BBC93B1A951B7B001BBA5F /* RecipeListTableViewController.m */,
+				36BBC9401A952B43001BBA5F /* RecipeViewController.h */,
+				36BBC9411A952B43001BBA5F /* RecipeViewController.m */,
 			);
 			path = GroceryList;
 			sourceTree = "<group>";
@@ -219,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36BBC91A1A94F7CC001BBA5F /* ViewController.m in Sources */,
 				36BBC9171A94F7CC001BBA5F /* AppDelegate.m in Sources */,
+				36BBC93C1A951B7B001BBA5F /* RecipeListTableViewController.m in Sources */,
 				36BBC9141A94F7CC001BBA5F /* main.m in Sources */,
+				36BBC9391A94F7FD001BBA5F /* Recipes.m in Sources */,
+				36BBC9421A952B43001BBA5F /* RecipeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +424,7 @@
 				36BBC9331A94F7CD001BBA5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36BBC9341A94F7CD001BBA5F /* Build configuration list for PBXNativeTarget "GroceryListTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +433,7 @@
 				36BBC9361A94F7CD001BBA5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
