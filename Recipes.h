@@ -10,11 +10,11 @@
 
 @interface Recipes : NSObject
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSDictionary *ingredients;
+@property (nonatomic, strong) NSArray *ingredients;
 @property (nonatomic, strong) NSString *directions;
 //@property (nonatomic, strong) NSArray *recipeList;
 
--(instancetype)initWithName: (NSString *) name andIngredients: (NSDictionary *) ingredients andDirections: (NSString *) directions;
+-(instancetype)initWithName: (NSString *) name andIngredients: (NSArray *) ingredients andDirections: (NSString *) directions;
 
 
 @end

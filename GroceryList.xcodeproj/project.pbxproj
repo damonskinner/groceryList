@@ -16,6 +16,7 @@
 		36BBC9391A94F7FD001BBA5F /* Recipes.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9381A94F7FD001BBA5F /* Recipes.m */; };
 		36BBC93C1A951B7B001BBA5F /* RecipeListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC93B1A951B7B001BBA5F /* RecipeListTableViewController.m */; };
 		36BBC9421A952B43001BBA5F /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9411A952B43001BBA5F /* RecipeViewController.m */; };
+		36BBC9451A953F4B001BBA5F /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9441A953F4B001BBA5F /* Ingredient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		36BBC93B1A951B7B001BBA5F /* RecipeListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeListTableViewController.m; sourceTree = "<group>"; };
 		36BBC9401A952B43001BBA5F /* RecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
 		36BBC9411A952B43001BBA5F /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
+		36BBC9431A953F4B001BBA5F /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredient.h; sourceTree = "<group>"; };
+		36BBC9441A953F4B001BBA5F /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 		36BBC9051A94F7CC001BBA5F = {
 			isa = PBXGroup;
 			children = (
+				36BBC9431A953F4B001BBA5F /* Ingredient.h */,
+				36BBC9441A953F4B001BBA5F /* Ingredient.m */,
 				36BBC9371A94F7FD001BBA5F /* Recipes.h */,
 				36BBC9381A94F7FD001BBA5F /* Recipes.m */,
 				36BBC9101A94F7CC001BBA5F /* GroceryList */,
@@ -233,6 +238,7 @@
 				36BBC93C1A951B7B001BBA5F /* RecipeListTableViewController.m in Sources */,
 				36BBC9141A94F7CC001BBA5F /* main.m in Sources */,
 				36BBC9391A94F7FD001BBA5F /* Recipes.m in Sources */,
+				36BBC9451A953F4B001BBA5F /* Ingredient.m in Sources */,
 				36BBC9421A952B43001BBA5F /* RecipeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

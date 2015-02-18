@@ -10,7 +10,7 @@
 
 @implementation Recipes
 
--(instancetype)initWithName: (NSString *) name andIngredients: (NSDictionary *)ingredients andDirections:(NSString *)directions{
+-(instancetype)initWithName: (NSString *) name andIngredients: (NSArray *)ingredients andDirections:(NSString *)directions{
     self=[super init];
     
     if (self) {
@@ -26,7 +26,7 @@
 
 -(instancetype)init {
     
-    return [self initWithName:@"" andIngredients:[[NSDictionary alloc] init] andDirections:@""];
+    return [self initWithName:@"" andIngredients:[[NSArray alloc] init] andDirections:@""];
 }
 
 @end

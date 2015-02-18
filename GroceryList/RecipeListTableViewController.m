@@ -9,6 +9,7 @@
 #import "RecipeListTableViewController.h"
 #import "Recipes.h"
 #import "RecipeViewController.h"
+#import "Ingredient.h"
 
 @interface RecipeListTableViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
@@ -26,43 +27,131 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    Recipes *firstRecipe = [[Recipes alloc] initWithName:@"Oven Roasted Chicken"
-                                          andIngredients:@{@"White Wine":@"1 cup",
-                                                           @"Whole Chicken":@"1",
-                                                           @"Lemon":@"1"}
-                                           andDirections:@"1.  Rub salt and pepper over chicken.  \n2.  Throw it in the oven.  \n3.  ??? \n4.  Profit"];
+    Ingredient *wholeChicken = [[Ingredient alloc] initWithName:@"Whole Chicken"
+                                                    andQuantity:@1
+                                                      andMetric:@"count"];
+    Ingredient *whiteWine = [[Ingredient alloc] initWithName:@"White Wine"
+                                                 andQuantity:@1
+                                                   andMetric:@"cup"];
+    Ingredient *lemon = [[Ingredient alloc] initWithName:@"Lemon"
+                                             andQuantity:@1
+                                               andMetric:@"count"];
+    NSArray *ingredientList=@[wholeChicken,whiteWine,lemon];
+    
+    Recipes *firstRecipe= [[Recipes alloc] initWithName:@"Oven Roasted Chicken"
+                                         andIngredients:ingredientList
+                                          andDirections:@"1.  Rub salt and pepper over chicken.  \n2.  Throw it in the oven.  \n3.  ??? \n4.  Profit"];
+    
+    
+    Ingredient *soySauce = [[Ingredient alloc] initWithName:@"Soy Sauce"
+                                                    andQuantity:@2
+                                                      andMetric:@"cups"];
+    Ingredient *greenOnions = [[Ingredient alloc] initWithName:@"Green Onions"
+                                                 andQuantity:@1
+                                                   andMetric:@"bunch"];
+    Ingredient *steak = [[Ingredient alloc] initWithName:@"Steak"
+                                             andQuantity:@1
+                                               andMetric:@"lb."];
+    Ingredient *sesameOil = [[Ingredient alloc] initWithName:@"Sesame Oil"
+                                             andQuantity:@3
+                                               andMetric:@"tablespoons"];
+    ingredientList=@[soySauce,greenOnions,steak,sesameOil];
+
     Recipes *secondRecipe = [[Recipes alloc] initWithName:@"Bulgogi"
-                                           andIngredients:@{@"Soy Sauce":@"1 cup",
-                                                            @"Green Onions":@"1",
-                                                            @"Sesame Oil":@"1/2 cup",
-                                                            @"Flank Steak":@"1 lb."}
+                                           andIngredients:ingredientList
                                             andDirections:@"1.  Chop up green onions up.  Slice steak.  \n2.  Combine oil, sliced steak, soy sauce, and onions.  \n3.  ??? \n4.  Profit"];
+    
+    
+    Ingredient *tomato = [[Ingredient alloc] initWithName:@"Tomato"
+                                                andQuantity:@1
+                                                  andMetric:@"count"];
+    Ingredient *tomatoSauce = [[Ingredient alloc] initWithName:@"Tomato Sauce"
+                                                   andQuantity:@2
+                                                     andMetric:@"cups"];
+    Ingredient *groundBeef = [[Ingredient alloc] initWithName:@"Ground Beef"
+                                             andQuantity:@1
+                                               andMetric:@"lb."];
+    Ingredient *spaghetti = [[Ingredient alloc] initWithName:@"Spaghetti"
+                                                  andQuantity:@1
+                                                    andMetric:@"cup"];
+    ingredientList=@[tomato,tomatoSauce,groundBeef,spaghetti];
+    
     Recipes *thirdRecipe = [[Recipes alloc] initWithName:@"Spaghetti with Meat Sauce"
-                                          andIngredients:@{@"Tomatoes":@"2",
-                                                           @"Tomato Sauce":@"3 cups",
-                                                           @"Ground Beef":@"1 lb."}
+                                          andIngredients:ingredientList
                                            andDirections:@"1.  Chop tomatoes.  \n2.  Boil spaghetti.  \n3.  ??? \n4.  Profit"];
+    
+    
+    tomatoSauce = [[Ingredient alloc] initWithName:@"Tomato Sauce"
+                                                   andQuantity:@2
+                                                     andMetric:@"cups"];
+    groundBeef = [[Ingredient alloc] initWithName:@"Ground Beef"
+                                                  andQuantity:@1
+                                                    andMetric:@"lb."];
+    Ingredient *bechamel = [[Ingredient alloc] initWithName:@"Bechamel Sauce"
+                                                  andQuantity:@2
+                                                    andMetric:@"cups"];
+    Ingredient *lasagnaPasta = [[Ingredient alloc] initWithName:@"Lasagna Pasta"
+                                                 andQuantity:@1
+                                                   andMetric:@"box"];
+    ingredientList=@[tomatoSauce,groundBeef,lasagnaPasta,bechamel];
+    
     Recipes *fourthRecipe = [[Recipes alloc] initWithName:@"Lasagna"
-                                           andIngredients:@{@"Ground Beef":@"1 lb.",
-                                                            @"Lasagna pasta sheets":@"1 box",
-                                                            @"Tomato Sauce":@"2 cups",
-                                                            @"Bechamel Sauce":@"2 cups"}
+                                           andIngredients:ingredientList
                                             andDirections:@"1.  Chop tomatoes.  \n2.  Boil lasagna sheets.  \n3.  ??? \n4.  Profit"];
+    
+    
+    tomato = [[Ingredient alloc] initWithName:@"Tomato"
+                                              andQuantity:@1
+                                                andMetric:@"count"];
+    Ingredient *icebergLettuce = [[Ingredient alloc] initWithName:@"Iceberg Lettuce"
+                                                andQuantity:@1
+                                                  andMetric:@"head"];
+    Ingredient *chickenBreast = [[Ingredient alloc] initWithName:@"Chicken Breast"
+                                                andQuantity:@1
+                                                  andMetric:@"lb."];
+    Ingredient *caesarDressing = [[Ingredient alloc] initWithName:@"Caesar Salad"
+                                                     andQuantity:@2
+                                                       andMetric:@"tablespoons"];
+    ingredientList=@[icebergLettuce,chickenBreast,caesarDressing,tomato];
+
     Recipes *fifthRecipe = [[Recipes alloc] initWithName:@"Caesar Salad"
-                                          andIngredients:@{@"Tomatoes":@"1",
-                                                           @"Chicken Breast":@"1 lb.",
-                                                           @"Caesar Dressing":@"1 tablespoon"}
-                                           andDirections:@"1.  Chop tomatoes.  \n2.  Grill chicken.  \n3.  ??? \n4.  Profit"];
+                                          andIngredients:ingredientList
+                                           andDirections:@"1.  Chop tomatoes and lettuce.  \n2.  Grill chicken.  \n3.  ??? \n4.  Profit"];
+    
+    
+    tomato = [[Ingredient alloc] initWithName:@"Tomato"
+                                  andQuantity:@1
+                                    andMetric:@"count"];
+    Ingredient *parmesanCheese = [[Ingredient alloc] initWithName:@"Grated Parmesan Cheese"
+                                                      andQuantity:@1
+                                                        andMetric:@"cup"];
+    chickenBreast = [[Ingredient alloc] initWithName:@"Chicken Breast"
+                                                     andQuantity:@1
+                                                       andMetric:@"lb."];
+    Ingredient *breadCrumbs = [[Ingredient alloc] initWithName:@"Bread Crumbs"
+                                                      andQuantity:@2
+                                                        andMetric:@"cups"];
+    ingredientList=@[parmesanCheese,chickenBreast,breadCrumbs,tomato];
+    
     Recipes *sixthRecipe = [[Recipes alloc] initWithName:@"Chicken Parmesan"
-                                          andIngredients:@{@"Tomatoes":@"1",
-                                                           @"Chicken Breast":@"1 lb.",
-                                                           @"Grated Parmesan Cheese":@"1 cup",
-                                                           @"Breading":@"1 cup"}
+                                          andIngredients:ingredientList
                                            andDirections:@"1.  Chop tomatoes.  \n2.  Bread chicken.  \n3.  ??? \n4.  Profit"];
+    
+    
+    
+    steak = [[Ingredient alloc] initWithName:@"Steak"
+                                  andQuantity:@1
+                                    andMetric:@"lb."];
+    Ingredient *butter = [[Ingredient alloc] initWithName:@"Butter"
+                                                      andQuantity:@1
+                                                        andMetric:@"tablespoon"];
+    Ingredient *garlic = [[Ingredient alloc] initWithName:@"Garlic"
+                                         andQuantity:@1
+                                           andMetric:@"clove"];
+    ingredientList=@[steak,butter,garlic];
+    
     Recipes *seventhRecipe = [[Recipes alloc] initWithName:@"Steak"
-                                            andIngredients:@{@"Flank Steak":@"1 lb.",
-                                                             @"Butter":@"1 tablespoon",
-                                                             @"Garlic":@"1 clove"}
+                                            andIngredients:ingredientList
                                              andDirections:@"1.  Chop garlic.  \n2.  Pan sear steak.  \n3.  ??? \n4.  Profit"];
     
     self.recipeList = [[NSArray alloc] initWithObjects:firstRecipe, secondRecipe, thirdRecipe, fourthRecipe, fifthRecipe, sixthRecipe, seventhRecipe, nil];
@@ -71,7 +160,7 @@
 //    NSLog(@"%@",[tempRecipe.ingredients objectForKey:@"White Wine"]);
     
     
-    
+    self.title=@"Pick a Recipe to Add:";
     self.myTableView.delegate=self;
     self.myTableView.dataSource=self;
     

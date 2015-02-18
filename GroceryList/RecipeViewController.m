@@ -7,6 +7,7 @@
 //
 
 #import "RecipeViewController.h"
+#import "Ingredient.h"
 
 
 @interface RecipeViewController ()
@@ -43,8 +44,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    NSArray *ingredientNames= [self.recipeDetails.ingredients allKeys];
-    return [ingredientNames count];
+    
+    return [self.recipeDetails.ingredients count];
 }
 
 
@@ -53,11 +54,13 @@
     
     // Configure the cell...
 //    Recipes *tempRecipe= self.recipeList[indexPath.row];
-    NSArray *ingredientNames= [self.recipeDetails.ingredients allKeys];
+    Ingredient *passedIngredients= self.recipeDetails.ingredients[indexPath.row];
 //    NSString *temp=ingredientNames[indexPath];
     
-    cell.textLabel.text=[NSString stringWithFormat:@"%@",ingredientNames[indexPath.row]];
-    cell.detailTextLabel.text=[NSString stringWithFormat:@"%@",[self.recipeDetails.ingredients objectForKey:ingredientNames[indexPath.row]]];
+    NSString *quantityAndMetric=[NSString stringWithFormat:@"%@ %@",passedIngredients.quantity,passedIngredients.metric];
+    
+    cell.textLabel.text=[NSString stringWithFormat:@"%@",passedIngredients.name];
+    cell.detailTextLabel.text=[NSString stringWithFormat:@"%@",quantityAndMetric];
     
     return cell;
 }
