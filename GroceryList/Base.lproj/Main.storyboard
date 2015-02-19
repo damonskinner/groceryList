@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zbv-pX-yAg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zbv-pX-yAg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -102,7 +102,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XWt-fZ-4lN"/>
+                    <navigationItem key="navigationItem" id="XWt-fZ-4lN">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="rGt-TB-c43">
+                            <connections>
+                                <segue destination="pUn-lT-sYO" kind="push" id="OP8-gl-dYg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="myTableView" destination="X0p-rD-hbH" id="FHa-Eu-8uk"/>
                     </connections>
@@ -110,6 +116,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6u-zM-sgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1312" y="985"/>
+        </scene>
+        <!--Add Grocery List View Controller-->
+        <scene sceneID="aIa-iQ-1Jk">
+            <objects>
+                <viewController id="pUn-lT-sYO" customClass="AddGroceryListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Xb-1S-loX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ge5-fb-TzR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="js4-mo-lYL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Grocery Item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTl-0h-qWQ">
+                                <rect key="frame" x="48" y="116" width="225" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYr-Gp-ROH">
+                                <rect key="frame" x="137" y="448" width="46" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addGroceryButton:" destination="pUn-lT-sYO" eventType="touchUpInside" id="xVf-B3-Tte"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zDb-e2-3ka">
+                                <rect key="frame" x="179" y="175" width="94" height="29"/>
+                                <connections>
+                                    <action selector="addGroceryQuantityAction:" destination="pUn-lT-sYO" eventType="valueChanged" id="OTY-tL-qza"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOJ-x6-f28">
+                                <rect key="frame" x="110" y="179" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eWe-HC-Pmb">
+                                <rect key="frame" x="0.0" y="235" width="320" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pUn-lT-sYO" id="FTA-u0-nb2"/>
+                                    <outlet property="delegate" destination="pUn-lT-sYO" id="66e-gg-SVz"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sie-9R-2VM"/>
+                    <connections>
+                        <outlet property="addGroceryMetric" destination="eWe-HC-Pmb" id="MRC-6N-jkR"/>
+                        <outlet property="addGroceryName" destination="WTl-0h-qWQ" id="nFa-8S-dvU"/>
+                        <outlet property="addGroceryQuantity" destination="zDb-e2-3ka" id="ihZ-lY-4Sa"/>
+                        <outlet property="addGroceryQuantityLabel" destination="lOJ-x6-f28" id="2gb-Zd-b35"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uo4-fA-yNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723" y="985"/>
         </scene>
         <!--Recipe View Controller-->
         <scene sceneID="INP-Ao-PeI">

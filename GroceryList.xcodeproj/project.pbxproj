@@ -18,6 +18,7 @@
 		36BBC9421A952B43001BBA5F /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9411A952B43001BBA5F /* RecipeViewController.m */; };
 		36BBC9451A953F4B001BBA5F /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9441A953F4B001BBA5F /* Ingredient.m */; };
 		36C49E251A95A2C500B5A899 /* GroceryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C49E241A95A2C500B5A899 /* GroceryListViewController.m */; };
+		A0D84B151A965DDB00606B6D /* AddGroceryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D84B141A965DDB00606B6D /* AddGroceryListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		36BBC9441A953F4B001BBA5F /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredient.m; sourceTree = "<group>"; };
 		36C49E231A95A2C500B5A899 /* GroceryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryListViewController.h; sourceTree = "<group>"; };
 		36C49E241A95A2C500B5A899 /* GroceryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryListViewController.m; sourceTree = "<group>"; };
+		A0D84B131A965DDB00606B6D /* AddGroceryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGroceryListViewController.h; sourceTree = "<group>"; };
+		A0D84B141A965DDB00606B6D /* AddGroceryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGroceryListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				36BBC9411A952B43001BBA5F /* RecipeViewController.m */,
 				36C49E231A95A2C500B5A899 /* GroceryListViewController.h */,
 				36C49E241A95A2C500B5A899 /* GroceryListViewController.m */,
+				A0D84B131A965DDB00606B6D /* AddGroceryListViewController.h */,
+				A0D84B141A965DDB00606B6D /* AddGroceryListViewController.m */,
 			);
 			path = GroceryList;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0D84B151A965DDB00606B6D /* AddGroceryListViewController.m in Sources */,
 				36BBC9171A94F7CC001BBA5F /* AppDelegate.m in Sources */,
 				36BBC93C1A951B7B001BBA5F /* RecipeListTableViewController.m in Sources */,
 				36BBC9141A94F7CC001BBA5F /* main.m in Sources */,
