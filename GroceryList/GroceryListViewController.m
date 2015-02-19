@@ -11,9 +11,18 @@
 @interface GroceryListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
+- (IBAction)clearList:(id)sender;
+
+
 @end
 
 @implementation GroceryListViewController
+
+-(void)viewWillAppear:(BOOL)animated  {
+    [super viewWillAppear:animated];
+    NSLog(@"View will appear");
+    [self.myTableView reloadData];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,7 +33,7 @@
     
     self.myTableView.delegate=self;
     self.myTableView.dataSource=self;
-    
+    self.title=@"Grocery List:";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -107,4 +116,12 @@
 }
 */
 
+- (IBAction)clearList:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setPersistentDomain:[NSDictionary dictionary] forName:[[NSBundle mainBundle] bundleIdentifier]];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.groceries = [[defaults objectForKey:@"groceryListDictionary"] mutableCopy];
+    
+    
+    [self.myTableView reloadData];
+}
 @end

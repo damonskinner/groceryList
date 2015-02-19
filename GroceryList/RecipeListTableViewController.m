@@ -13,14 +13,22 @@
 
 @interface RecipeListTableViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
+
 - (IBAction)makeGroceryList:(id)sender;
 
 @end
 
 @implementation RecipeListTableViewController
 
+-(void)viewWillAppear:(BOOL)animated  {
+    [super viewWillAppear:animated];
+    NSLog(@"View will appear");
+    [self.myTableView reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"View did load");
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -50,7 +58,7 @@
     Ingredient *greenOnions = [[Ingredient alloc] initWithName:@"Green Onions"
                                                  andQuantity:@1
                                                    andMetric:@"bunch"];
-    Ingredient *steak = [[Ingredient alloc] initWithName:@"Steak"
+    Ingredient *steak = [[Ingredient alloc] initWithName:@"Flank Steak"
                                              andQuantity:@1
                                                andMetric:@"lb."];
     Ingredient *sesameOil = [[Ingredient alloc] initWithName:@"Sesame Oil"
@@ -144,7 +152,7 @@
     Ingredient *chickenBreast = [[Ingredient alloc] initWithName:@"Chicken Breast"
                                                 andQuantity:@1
                                                   andMetric:@"lb."];
-    Ingredient *caesarDressing = [[Ingredient alloc] initWithName:@"Caesar Salad"
+    Ingredient *caesarDressing = [[Ingredient alloc] initWithName:@"Caesar Dressing"
                                                      andQuantity:@2
                                                        andMetric:@"tablespoons"];
     ingredientList=@[icebergLettuce,chickenBreast,caesarDressing,tomato];
@@ -185,7 +193,7 @@
                                            andMetric:@"clove"];
     ingredientList=@[steak,butter,garlic];
     
-    Recipes *seventhRecipe = [[Recipes alloc] initWithName:@"Steak"
+    Recipes *seventhRecipe = [[Recipes alloc] initWithName:@"Flank Steak"
                                             andIngredients:ingredientList
                                              andDirections:@"1.  Chop garlic.  \n2.  Pan sear steak.  \n3.  ??? \n4.  Profit"];
     
@@ -228,6 +236,16 @@
     // Configure the cell...
     Recipes *tempRecipe= self.recipeList[indexPath.row];
     cell.textLabel.text=[NSString stringWithFormat:@"%@",tempRecipe.name];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([defaults boolForKey:tempRecipe.name])
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     
     return cell;
 }
