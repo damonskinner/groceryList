@@ -145,14 +145,8 @@
                                     <action selector="addGroceryButton:" destination="pUn-lT-sYO" eventType="touchUpInside" id="xVf-B3-Tte"/>
                                 </connections>
                             </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zDb-e2-3ka">
-                                <rect key="frame" x="179" y="214" width="94" height="29"/>
-                                <connections>
-                                    <action selector="addGroceryQuantityAction:" destination="pUn-lT-sYO" eventType="valueChanged" id="OTY-tL-qza"/>
-                                </connections>
-                            </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOJ-x6-f28">
-                                <rect key="frame" x="129" y="218" width="42" height="21"/>
+                                <rect key="frame" x="129" y="195" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -165,28 +159,27 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbJ-J3-mm7">
-                                <rect key="frame" x="48" y="218" width="73" height="21"/>
+                                <rect key="frame" x="48" y="195" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNj-wX-zOW">
-                                <rect key="frame" x="0.0" y="85" width="320" height="37"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Grocery Item" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WTl-0h-qWQ">
+                                <rect key="frame" x="48" y="107" width="225" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Grocery Item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTl-0h-qWQ">
-                                <rect key="frame" x="48" y="142" width="225" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="done"/>
                             </textField>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zDb-e2-3ka">
+                                <rect key="frame" x="179" y="191" width="94" height="29"/>
+                                <connections>
+                                    <action selector="addGroceryQuantityAction:" destination="pUn-lT-sYO" eventType="valueChanged" id="OTY-tL-qza"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="sie-9R-2VM"/>
                     <connections>
-                        <outlet property="addGroceryError" destination="gNj-wX-zOW" id="pdg-Ct-poD"/>
                         <outlet property="addGroceryMetric" destination="eWe-HC-Pmb" id="MRC-6N-jkR"/>
                         <outlet property="addGroceryName" destination="WTl-0h-qWQ" id="nFa-8S-dvU"/>
                         <outlet property="addGroceryQuantity" destination="zDb-e2-3ka" id="ihZ-lY-4Sa"/>
