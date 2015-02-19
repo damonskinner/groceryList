@@ -12,7 +12,8 @@
 
 @interface RecipeViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
-@property (weak, nonatomic) IBOutlet UILabel *directionsLabel;
+- (IBAction)addToGrocery:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextView *directionsLabel;
 
 @end
 
@@ -76,4 +77,32 @@
 }
 */
 
+- (IBAction)addToGrocery:(id)sender {
+//    UISwitch *addGrocerySwitch = (UISwitch *)sender;
+//    
+//    if ( addGrocerySwitch.isOn )
+//    {
+//        //add recipeDetails to NSUserDefaults
+//        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//        
+//        for (NSString *key in self.recipeDetails.ingredients)
+//        {
+//            //            NSString *ingredientAmount = self.recipeDetails.ingredients];
+//        }
+//        
+//        //        [defaults setObject:firstName forKey:@"firstName"];
+//        //        [defaults setObject:lastName forKey:@"lastname"];
+//        //        [defaults setInteger:age forKey:@"age"];
+//        //        [defaults setObject:imageData forKey:@"image"];
+//        
+//        [defaults synchronize];
+//        
+//        NSLog(@"Data saved");    }
+//    else
+//    {
+//        //remove recipeDetails from NSUserDefaults
+//        NSLog(@"Switch is off");
+//    
+//    
+}
 @end

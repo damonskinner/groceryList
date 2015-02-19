@@ -65,23 +65,57 @@
     Ingredient *tomato = [[Ingredient alloc] initWithName:@"Tomato"
                                                 andQuantity:@1
                                                   andMetric:@"count"];
-    Ingredient *tomatoSauce = [[Ingredient alloc] initWithName:@"Tomato Sauce"
+    Ingredient *tomatoPaste = [[Ingredient alloc] initWithName:@"Tomato Sauce"
                                                    andQuantity:@2
                                                      andMetric:@"cups"];
+    Ingredient *oliveOil = [[Ingredient alloc] initWithName:@"Olive Oil"
+                                                   andQuantity:@2
+                                                     andMetric:@"tablespoons"];
     Ingredient *groundBeef = [[Ingredient alloc] initWithName:@"Ground Beef"
                                              andQuantity:@1
                                                andMetric:@"lb."];
     Ingredient *spaghetti = [[Ingredient alloc] initWithName:@"Spaghetti"
                                                   andQuantity:@1
                                                     andMetric:@"cup"];
-    ingredientList=@[tomato,tomatoSauce,groundBeef,spaghetti];
+    Ingredient *onion = [[Ingredient alloc] initWithName:@"Onion"
+                                                   andQuantity:@1
+                                                     andMetric:@"count"];
+    Ingredient *garlic = [[Ingredient alloc] initWithName:@"Garlic"
+                                                   andQuantity:@1
+                                                     andMetric:@"clove"];
+    Ingredient *celery = [[Ingredient alloc] initWithName:@"Celery"
+                                              andQuantity:@1
+                                                andMetric:@"cup"];
+    Ingredient *butter = [[Ingredient alloc] initWithName:@"Butter"
+                                              andQuantity:@2
+                                                andMetric:@"tablespoons"];
+    Ingredient *sugar = [[Ingredient alloc] initWithName:@"Sugar"
+                                              andQuantity:@1
+                                                andMetric:@"teaspoon"];
+    Ingredient *salt = [[Ingredient alloc] initWithName:@"Salt"
+                                             andQuantity:@1
+                                               andMetric:@"teaspoon"];
+    Ingredient *mint = [[Ingredient alloc] initWithName:@"Mint"
+                                             andQuantity:@1
+                                               andMetric:@"teaspoon"];
+    Ingredient *mushrooms = [[Ingredient alloc] initWithName:@"Mushrooms"
+                                             andQuantity:@6
+                                               andMetric:@"ounces"];
+    Ingredient *beefBroth = [[Ingredient alloc] initWithName:@"Beef Broth"
+                                             andQuantity:@2
+                                               andMetric:@"cans"];
+    Ingredient *basil = [[Ingredient alloc] initWithName:@"Basil"
+                                             andQuantity:@2
+                                               andMetric:@"teaspoons"];
+    
+    ingredientList=@[tomato,tomatoPaste,groundBeef,spaghetti, oliveOil, onion, celery, sugar, butter, mint, salt, mushrooms, beefBroth, basil];
     
     Recipes *thirdRecipe = [[Recipes alloc] initWithName:@"Spaghetti with Meat Sauce"
                                           andIngredients:ingredientList
-                                           andDirections:@"1.  Chop tomatoes.  \n2.  Boil spaghetti.  \n3.  ??? \n4.  Profit"];
+                                           andDirections:@"1.  In a large skillet, warm olive oil over low heat; saute onion, garlic and celery until onion is transparent.  \n\n2.  Stir in butter and increase heat to medium; brown beef until no longer pink. Mix in sugar, 1 teaspoon salt, mint and mushrooms; lower heat and stir for about 3 minutes.  \n\n3.  In a large bowl, combine tomato paste and broth; pour liquid and basil to pot. Simmer over very low heat for about 2 hours, stirring occasionally.  \n\n4.  Bring a large pot of water to a vigorous boil with 3 tablespoons salt and 1 teaspoon olive oil. Slip spaghetti into water holding on to ends until strands soften a bit. Cook over high heat for 7 to 8 minutes only. When properly cooked, raw taste should be gone but still have a firm texture.  \n\n5.  When ready to serve, combine pasta with meat sauce; serve on a warmed platter or bowl topped with parsley and Romano cheese."];
     
     
-    tomatoSauce = [[Ingredient alloc] initWithName:@"Tomato Sauce"
+    tomatoPaste = [[Ingredient alloc] initWithName:@"Tomato Sauce"
                                                    andQuantity:@2
                                                      andMetric:@"cups"];
     groundBeef = [[Ingredient alloc] initWithName:@"Ground Beef"
@@ -93,11 +127,11 @@
     Ingredient *lasagnaPasta = [[Ingredient alloc] initWithName:@"Lasagna Pasta"
                                                  andQuantity:@1
                                                    andMetric:@"box"];
-    ingredientList=@[tomatoSauce,groundBeef,lasagnaPasta,bechamel];
+    ingredientList=@[tomatoPaste,groundBeef,lasagnaPasta,bechamel];
     
     Recipes *fourthRecipe = [[Recipes alloc] initWithName:@"Lasagna"
                                            andIngredients:ingredientList
-                                            andDirections:@"1.  Chop tomatoes.  \n2.  Boil lasagna sheets.  \n3.  ??? \n4.  Profit"];
+                                            andDirections:@"1.  Chop tomatoes.  \n2.  Boil lasagna sheets.  \n3.  Heat tomato sauce.  \n4.  ??? \n4.  Profit"];
     
     
     tomato = [[Ingredient alloc] initWithName:@"Tomato"
@@ -142,10 +176,10 @@
     steak = [[Ingredient alloc] initWithName:@"Steak"
                                   andQuantity:@1
                                     andMetric:@"lb."];
-    Ingredient *butter = [[Ingredient alloc] initWithName:@"Butter"
+    butter = [[Ingredient alloc] initWithName:@"Butter"
                                                       andQuantity:@1
                                                         andMetric:@"tablespoon"];
-    Ingredient *garlic = [[Ingredient alloc] initWithName:@"Garlic"
+    garlic = [[Ingredient alloc] initWithName:@"Garlic"
                                          andQuantity:@1
                                            andMetric:@"clove"];
     ingredientList=@[steak,butter,garlic];
