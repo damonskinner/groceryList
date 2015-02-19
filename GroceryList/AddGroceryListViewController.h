@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddGroceryListViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface AddGroceryListViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 
 @end

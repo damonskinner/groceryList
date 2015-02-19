@@ -128,7 +128,7 @@
             //add to it, and put it back in groceryListDictionary
             if ( [groceryListDictionary objectForKey:[recipeIngredient.name capitalizedString]] )
             {
-                NSDictionary *immutableSavedIngredientsDictionary = groceryListDictionary[recipeIngredient.name];
+                NSDictionary *immutableSavedIngredientsDictionary = groceryListDictionary[[recipeIngredient.name capitalizedString]];
                 
                 ingredientsDictionary = [immutableSavedIngredientsDictionary mutableCopy];
                 
@@ -168,7 +168,7 @@
             
             if ( [groceryListDictionary objectForKey:[recipeIngredient.name capitalizedString]] )
             {
-                NSDictionary *immutableSavedIngredientsDictionary = groceryListDictionary[recipeIngredient.name];
+                NSDictionary *immutableSavedIngredientsDictionary = groceryListDictionary[[recipeIngredient.name capitalizedString]];
                 
                 NSMutableDictionary *savedIngredientsDictionary = [immutableSavedIngredientsDictionary mutableCopy];
                 

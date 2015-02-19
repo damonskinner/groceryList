@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIStepper *addGroceryQuantity;
 @property (weak, nonatomic) IBOutlet UIPickerView *addGroceryMetric;
 @property (weak, nonatomic) IBOutlet UILabel *addGroceryQuantityLabel;
-@property (weak, nonatomic) IBOutlet UILabel *addGroceryError;
 
 @property (strong, nonatomic) NSArray *arrayMetric;
 
@@ -31,6 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    self.addGroceryName.delegate = self;
     
     self.arrayMetric = [[NSArray alloc] initWithObjects:@"---", @"count", @"cup", @"dz.", @"gal.", @"kg.", @"lb.", @"oz.", @"pt.", @"qrt.", @"tbsp.", @"tsp.", nil];
 }
@@ -49,6 +50,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    if ([self.addGroceryName isFirstResponder] && [touch view] != self.addGroceryName) {
+        [self.addGroceryName resignFirstResponder];
+    }
+    [super touchesBegan:touches withEvent:event];
+}
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -96,17 +111,19 @@
     
     if ( [groceryItemCheck isEqualToString:@""] )
     {
-        self.addGroceryError.text = @"Please enter the name of an item";
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter the name of an item" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
     else if ( !valid )
     {
-        self.addGroceryError.text = @"Please enter a valid item";
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter a valid item" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
     else
     {
         if ( [groceryListDictionary objectForKey:[self.addGroceryName.text capitalizedString]] )
         {
-            NSDictionary *immutableSavedIngredientsDictionary = groceryListDictionary[self.addGroceryName.text];
+            NSDictionary *immutableSavedIngredientsDictionary = groceryListDictionary[[self.addGroceryName.text capitalizedString]];
             
             ingredientsDictionary = [immutableSavedIngredientsDictionary mutableCopy];
             
