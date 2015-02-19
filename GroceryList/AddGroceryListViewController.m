@@ -31,7 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.arrayMetric = [[NSArray alloc] initWithObjects:@"None", @"cup", @"oz", @"lb", @"tsp", @"tbsp", @"quart", nil];
+    self.arrayMetric = [[NSArray alloc] initWithObjects:@"---", @"cup", @"doz.", @"gal.", @"lb.",@"oz.",@"qrt.", @"tbsp.",@"tsp.", nil];
 }
 
 - (void)didReceiveMemoryWarning {

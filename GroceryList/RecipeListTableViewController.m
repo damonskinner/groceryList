@@ -38,13 +38,13 @@
     
     Ingredient *wholeChicken = [[Ingredient alloc] initWithName:@"Whole Chicken"
                                                     andQuantity:@1
-                                                      andMetric:@"count"];
+                                                      andMetric:@""];
     Ingredient *whiteWine = [[Ingredient alloc] initWithName:@"White Wine"
                                                  andQuantity:@1
                                                    andMetric:@"cup"];
     Ingredient *lemon = [[Ingredient alloc] initWithName:@"Lemon"
                                              andQuantity:@1
-                                               andMetric:@"count"];
+                                               andMetric:@""];
     NSArray *ingredientList=@[wholeChicken,whiteWine,lemon];
     
     Recipes *firstRecipe= [[Recipes alloc] initWithName:@"Oven Roasted Chicken"
@@ -57,13 +57,13 @@
                                                       andMetric:@"cups"];
     Ingredient *greenOnions = [[Ingredient alloc] initWithName:@"Green Onions"
                                                  andQuantity:@1
-                                                   andMetric:@"bunch"];
+                                                   andMetric:@""];
     Ingredient *steak = [[Ingredient alloc] initWithName:@"Flank Steak"
                                              andQuantity:@1
                                                andMetric:@"lb."];
     Ingredient *sesameOil = [[Ingredient alloc] initWithName:@"Sesame Oil"
                                              andQuantity:@3
-                                               andMetric:@"tablespoons"];
+                                               andMetric:@"tbsp."];
     ingredientList=@[soySauce,greenOnions,steak,sesameOil];
 
     Recipes *secondRecipe = [[Recipes alloc] initWithName:@"Bulgogi"
@@ -73,13 +73,13 @@
     
     Ingredient *tomato = [[Ingredient alloc] initWithName:@"Tomato"
                                                 andQuantity:@1
-                                                  andMetric:@"count"];
+                                                  andMetric:@""];
     Ingredient *tomatoPaste = [[Ingredient alloc] initWithName:@"Tomato Sauce"
                                                    andQuantity:@2
                                                      andMetric:@"cups"];
     Ingredient *oliveOil = [[Ingredient alloc] initWithName:@"Olive Oil"
                                                    andQuantity:@2
-                                                     andMetric:@"tablespoons"];
+                                                     andMetric:@"tbsp."];
     Ingredient *groundBeef = [[Ingredient alloc] initWithName:@"Ground Beef"
                                              andQuantity:@1
                                                andMetric:@"lb."];
@@ -88,7 +88,7 @@
                                                     andMetric:@"cup"];
     Ingredient *onion = [[Ingredient alloc] initWithName:@"Onion"
                                                    andQuantity:@1
-                                                     andMetric:@"count"];
+                                                     andMetric:@""];
     Ingredient *garlic = [[Ingredient alloc] initWithName:@"Garlic"
                                                    andQuantity:@1
                                                      andMetric:@"clove"];
@@ -97,25 +97,25 @@
                                                 andMetric:@"cup"];
     Ingredient *butter = [[Ingredient alloc] initWithName:@"Butter"
                                               andQuantity:@2
-                                                andMetric:@"tablespoons"];
+                                                andMetric:@"tbsp."];
     Ingredient *sugar = [[Ingredient alloc] initWithName:@"Sugar"
                                               andQuantity:@1
-                                                andMetric:@"teaspoon"];
+                                                andMetric:@"tsp."];
     Ingredient *salt = [[Ingredient alloc] initWithName:@"Salt"
                                              andQuantity:@1
-                                               andMetric:@"teaspoon"];
+                                               andMetric:@"tsp."];
     Ingredient *mint = [[Ingredient alloc] initWithName:@"Mint"
                                              andQuantity:@1
-                                               andMetric:@"teaspoon"];
+                                               andMetric:@"tsp."];
     Ingredient *mushrooms = [[Ingredient alloc] initWithName:@"Mushrooms"
                                              andQuantity:@6
-                                               andMetric:@"ounces"];
+                                               andMetric:@"oz."];
     Ingredient *beefBroth = [[Ingredient alloc] initWithName:@"Beef Broth"
-                                             andQuantity:@2
-                                               andMetric:@"cans"];
+                                             andQuantity:@4
+                                               andMetric:@"cups"];
     Ingredient *basil = [[Ingredient alloc] initWithName:@"Basil"
                                              andQuantity:@2
-                                               andMetric:@"teaspoons"];
+                                               andMetric:@"tsp."];
     
     ingredientList=@[tomato,tomatoPaste,groundBeef,spaghetti, oliveOil, onion, celery, sugar, butter, mint, salt, mushrooms, beefBroth, basil];
     
@@ -145,7 +145,7 @@
     
     tomato = [[Ingredient alloc] initWithName:@"Tomato"
                                               andQuantity:@1
-                                                andMetric:@"count"];
+                                                andMetric:@""];
     Ingredient *icebergLettuce = [[Ingredient alloc] initWithName:@"Iceberg Lettuce"
                                                 andQuantity:@1
                                                   andMetric:@"head"];
@@ -154,7 +154,7 @@
                                                   andMetric:@"lb."];
     Ingredient *caesarDressing = [[Ingredient alloc] initWithName:@"Caesar Dressing"
                                                      andQuantity:@2
-                                                       andMetric:@"tablespoons"];
+                                                       andMetric:@"tbsp."];
     ingredientList=@[icebergLettuce,chickenBreast,caesarDressing,tomato];
 
     Recipes *fifthRecipe = [[Recipes alloc] initWithName:@"Caesar Salad"
@@ -164,7 +164,7 @@
     
     tomato = [[Ingredient alloc] initWithName:@"Tomato"
                                   andQuantity:@1
-                                    andMetric:@"count"];
+                                    andMetric:@""];
     Ingredient *parmesanCheese = [[Ingredient alloc] initWithName:@"Grated Parmesan Cheese"
                                                       andQuantity:@1
                                                         andMetric:@"cup"];
@@ -182,18 +182,18 @@
     
     
     
-    steak = [[Ingredient alloc] initWithName:@"Steak"
+    steak = [[Ingredient alloc] initWithName:@"Flank Steak"
                                   andQuantity:@1
                                     andMetric:@"lb."];
     butter = [[Ingredient alloc] initWithName:@"Butter"
                                                       andQuantity:@1
-                                                        andMetric:@"tablespoon"];
+                                                        andMetric:@"tbsp."];
     garlic = [[Ingredient alloc] initWithName:@"Garlic"
                                          andQuantity:@1
                                            andMetric:@"clove"];
     ingredientList=@[steak,butter,garlic];
     
-    Recipes *seventhRecipe = [[Recipes alloc] initWithName:@"Flank Steak"
+    Recipes *seventhRecipe = [[Recipes alloc] initWithName:@"Steak"
                                             andIngredients:ingredientList
                                              andDirections:@"1.  Chop garlic.  \n2.  Pan sear steak.  \n3.  ??? \n4.  Profit"];
     
