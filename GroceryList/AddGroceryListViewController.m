@@ -8,6 +8,7 @@
 
 #import "AddGroceryListViewController.h"
 
+
 @interface AddGroceryListViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *addGroceryName;
@@ -92,15 +93,19 @@
     NSString *groceryItemCheck = self.addGroceryName.text;
     
     NSCharacterSet *alphaSet = [NSCharacterSet letterCharacterSet];
-    BOOL valid = [[groceryItemCheck stringByTrimmingCharactersInSet:alphaSet] isEqualToString:@""];
+//    groceryItemCheck = [groceryItemCheck stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    BOOL valid = [[[groceryItemCheck stringByTrimmingCharactersInSet:alphaSet] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] isEqualToString:@""];
     
     if ( [groceryItemCheck isEqualToString:@""] )
     {
-        self.addGroceryError.text = @"Please enter the name of an item";
+        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Please enter the name of an item" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+        [alertview show];
+        
     }
     else if ( !valid )
     {
-        self.addGroceryError.text = @"Please enter a valid item";
+        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Please enter a valid item" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+        [alertview show];
     }
     else
     {
