@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 - (IBAction)addToGrocery:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextView *directionsLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *onOffSwitch;
 
 @end
 
@@ -31,6 +32,21 @@
     self.myTableView.dataSource=self;
     self.title = self.recipeDetails.name;
     self.directionsLabel.text=self.recipeDetails.directions;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if ( [defaults boolForKey:self.recipeDetails.name] )
+    {
+        [self.onOffSwitch setOn:[defaults boolForKey:self.recipeDetails.name]];
+    }
+    else
+    {
+        [self.onOffSwitch setOn:NO];
+    }
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -137,6 +153,8 @@
         
         [defaults setObject:groceryListDictionary forKey:@"groceryListDictionary"];
         
+        [defaults setBool:addGrocerySwitch.isOn forKey:self.recipeDetails.name];
+        
         [defaults synchronize];
         
         NSLog(@"Data saved");
@@ -173,6 +191,8 @@
         
         [defaults setObject:groceryListDictionary forKey:@"groceryListDictionary"];
         
+        [defaults setBool:addGrocerySwitch.isOn forKey:self.recipeDetails.name];
+        
         [defaults synchronize];
         
         NSLog(@"Data removed");
@@ -180,52 +200,4 @@
 }
 
 
-
-//- (IBAction)addToGrocery:(id)sender {
-//    UISwitch *addGrocerySwitch = (UISwitch *)sender;
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    
-//    if ( addGrocerySwitch.isOn )
-//    {
-//        NSMutableDictionary *groceryList = [defaults objectForKey:@"groceryDictionary"];
-//        
-//        if ([groceryList count] ==0) {
-//            //add recipe ingredients to empty NSUserDefaults dictionary object
-//        
-//            NSMutableDictionary *tempGroceryList = [[NSMutableDictionary alloc] init];
-//            
-//            for (Ingredient *eachIngredient in self.recipeDetails.ingredients)
-//            {
-//                [tempGroceryList setValue:eachIngredient.quantity forKey:eachIngredient.name];
-//            }
-//            
-//            [defaults setObject:tempGroceryList forKey:@"groceryDictionary"];
-//            [defaults synchronize];
-//            
-//        } else if ([groceryList count] !=0) {
-//            NSMutableArray *groceryListKeys = [[groceryList allKeys] mutableCopy];
-//            
-//            for (Ingredient *eachIngredient in self.recipeDetails.ingredients) {
-//                if ([groceryListKeys containsObject:eachIngredient.name]) {
-//                    NSInteger temporaryQuantity = [[groceryList objectForKey:eachIngredient.name] integerValue];
-//                    NSInteger quantityToAdd = [eachIngredient.quantity integerValue];
-//                    NSInteger newQuantity = temporaryQuantity + quantityToAdd;
-//                    eachIngredient.quantity=[NSNumber numberWithInteger:newQuantity];
-//                    
-//                    [groceryList setObject:eachIngredient.quantity forKey:eachIngredient.name];
-//                    
-//                } else {
-//                    [groceryList setObject:eachIngredient.quantity forKey:eachIngredient.name];
-//                }
-//            }
-//        }
-//    }
-//        
-//    else
-//    {
-//        //remove recipeDetails from NSUserDefaults
-//        NSLog(@"Switch is off");
-//    }
-//    
-//}
 @end

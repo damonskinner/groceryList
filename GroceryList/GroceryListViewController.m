@@ -19,8 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.groceries = [defaults objectForKey:@"groceryListDictionary"];
-    self.groceryKeys = [self.groceries allKeys];
+    self.groceries = [[defaults objectForKey:@"groceryListDictionary"] mutableCopy];
+    
     
     self.myTableView.delegate=self;
     self.myTableView.dataSource=self;
@@ -50,7 +50,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell" forIndexPath:indexPath];
     
     // Configure the cell...
-//    
+    self.groceryKeys = [self.groceries allKeys];
     cell.textLabel.text=[NSString stringWithFormat:@"%@",self.groceryKeys[indexPath.row]];
     NSDictionary *ingredientDictionary = [self.groceries objectForKey:self.groceryKeys[indexPath.row]];
     
@@ -69,6 +69,33 @@
 }
 
 
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+     // Return NO if you do not want the specified item to be editable.
+     return YES;
+ }
+ 
+
+
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+     // Delete the row from the data source
+     self.groceryKeys = [self.groceries allKeys];
+     [self.groceries removeObjectForKey:self.groceryKeys[indexPath.row]];
+     
+     
+     NSMutableDictionary *groceryListDictionary=self.groceries;
+     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+     [defaults setObject:groceryListDictionary forKey:@"groceryListDictionary"];
+     
+     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+     
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
+ }
+ 
 
 /*
 #pragma mark - Navigation

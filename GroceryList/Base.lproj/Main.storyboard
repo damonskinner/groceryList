@@ -194,6 +194,7 @@
                     <connections>
                         <outlet property="directionsLabel" destination="jHd-6y-KDa" id="30i-XE-Q5y"/>
                         <outlet property="myTableView" destination="c51-Ub-Nsw" id="nH8-u4-guq"/>
+                        <outlet property="onOffSwitch" destination="0EY-0H-6kP" id="R4f-GB-T64"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qw4-gf-cCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
