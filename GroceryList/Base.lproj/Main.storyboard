@@ -124,7 +124,7 @@
             </objects>
             <point key="canvasLocation" x="1312" y="985"/>
         </scene>
-        <!--Add Grocery List View Controller-->
+        <!--Add Item-->
         <scene sceneID="aIa-iQ-1Jk">
             <objects>
                 <viewController id="pUn-lT-sYO" customClass="AddGroceryListViewController" sceneMemberID="viewController">
@@ -136,11 +136,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Grocery Item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTl-0h-qWQ">
-                                <rect key="frame" x="48" y="116" width="225" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYr-Gp-ROH">
                                 <rect key="frame" x="137" y="448" width="46" height="30"/>
                                 <state key="normal" title="Save">
@@ -151,29 +146,47 @@
                                 </connections>
                             </button>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zDb-e2-3ka">
-                                <rect key="frame" x="179" y="175" width="94" height="29"/>
+                                <rect key="frame" x="179" y="214" width="94" height="29"/>
                                 <connections>
                                     <action selector="addGroceryQuantityAction:" destination="pUn-lT-sYO" eventType="valueChanged" id="OTY-tL-qza"/>
                                 </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOJ-x6-f28">
-                                <rect key="frame" x="110" y="179" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOJ-x6-f28">
+                                <rect key="frame" x="129" y="218" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eWe-HC-Pmb">
-                                <rect key="frame" x="0.0" y="235" width="320" height="162"/>
+                                <rect key="frame" x="0.0" y="261" width="320" height="162"/>
                                 <connections>
                                     <outlet property="dataSource" destination="pUn-lT-sYO" id="FTA-u0-nb2"/>
                                     <outlet property="delegate" destination="pUn-lT-sYO" id="66e-gg-SVz"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbJ-J3-mm7">
+                                <rect key="frame" x="48" y="218" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNj-wX-zOW">
+                                <rect key="frame" x="0.0" y="85" width="320" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Grocery Item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTl-0h-qWQ">
+                                <rect key="frame" x="48" y="142" width="225" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sie-9R-2VM"/>
+                    <navigationItem key="navigationItem" title="Add Item" id="sie-9R-2VM"/>
                     <connections>
+                        <outlet property="addGroceryError" destination="gNj-wX-zOW" id="pdg-Ct-poD"/>
                         <outlet property="addGroceryMetric" destination="eWe-HC-Pmb" id="MRC-6N-jkR"/>
                         <outlet property="addGroceryName" destination="WTl-0h-qWQ" id="nFa-8S-dvU"/>
                         <outlet property="addGroceryQuantity" destination="zDb-e2-3ka" id="ihZ-lY-4Sa"/>

@@ -126,7 +126,7 @@
             
             //if ingredient already exists, get it out of groceryListDictionary,
             //add to it, and put it back in groceryListDictionary
-            if ( [groceryListDictionary objectForKey:recipeIngredient.name] )
+            if ( [groceryListDictionary objectForKey:[recipeIngredient.name capitalizedString]] )
             {
                 NSDictionary *immutableSavedIngredientsDictionary = groceryListDictionary[recipeIngredient.name];
                 
@@ -138,7 +138,7 @@
                 
                 ingredientsDictionary[@"quantity"] = quantity;
                 
-                groceryListDictionary[recipeIngredient.name] = ingredientsDictionary;
+                groceryListDictionary[[recipeIngredient.name capitalizedString]] = ingredientsDictionary;
             }
             else //otherwise, create it and put it in the groceryListDictionary
             {
@@ -147,7 +147,7 @@
                 ingredientsDictionary[@"quantity"] = recipeIngredient.quantity;
                 ingredientsDictionary[@"metric"] = recipeIngredient.metric;
                 
-                groceryListDictionary[recipeIngredient.name] = ingredientsDictionary;
+                groceryListDictionary[[recipeIngredient.name capitalizedString]] = ingredientsDictionary;
             }
         }
         
@@ -166,7 +166,7 @@
         {
             Ingredient *recipeIngredient = self.recipeDetails.ingredients[i];
             
-            if ( [groceryListDictionary objectForKey:recipeIngredient.name] )
+            if ( [groceryListDictionary objectForKey:[recipeIngredient.name capitalizedString]] )
             {
                 NSDictionary *immutableSavedIngredientsDictionary = groceryListDictionary[recipeIngredient.name];
                 
@@ -180,11 +180,11 @@
                 {
                     savedIngredientsDictionary[@"quantity"] = quantity;
                     
-                    groceryListDictionary[recipeIngredient.name] = savedIngredientsDictionary;
+                    groceryListDictionary[[recipeIngredient.name capitalizedString]] = savedIngredientsDictionary;
                 }
                 else
                 {
-                    [groceryListDictionary removeObjectForKey:recipeIngredient.name];
+                    [groceryListDictionary removeObjectForKey:[recipeIngredient.name capitalizedString]];
                 }
             }
         }
