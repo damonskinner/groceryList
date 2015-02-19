@@ -21,14 +21,16 @@
 -(void)viewWillAppear:(BOOL)animated  {
     [super viewWillAppear:animated];
     NSLog(@"View will appear");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.groceries = [[defaults objectForKey:@"groceryListDictionary"] mutableCopy];
     [self.myTableView reloadData];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.groceries = [[defaults objectForKey:@"groceryListDictionary"] mutableCopy];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    self.groceries = [[defaults objectForKey:@"groceryListDictionary"] mutableCopy];
     
     
     self.myTableView.delegate=self;
@@ -60,11 +62,14 @@
     
     // Configure the cell...
     self.groceryKeys = [self.groceries allKeys];
-    cell.textLabel.text=[NSString stringWithFormat:@"%@",self.groceryKeys[indexPath.row]];
+    cell.textLabel.text=[[NSString stringWithFormat:@"%@",self.groceryKeys[indexPath.row]]capitalizedString];
     NSDictionary *ingredientDictionary = [self.groceries objectForKey:self.groceryKeys[indexPath.row]];
     
     NSString *quantity=[NSString stringWithFormat:@"%@", ingredientDictionary [@"quantity"]];
     NSString *metric=[NSString stringWithFormat:@"%@", ingredientDictionary [@"metric"]];
+    if([metric isEqualToString:@"count"] || [metric isEqualToString:@"Count"]){
+        metric=@"";
+    }
     
     NSString *quantityPlusMetric = [NSString stringWithFormat:@"%@ %@",quantity, metric];
     cell.detailTextLabel.text=[NSString stringWithFormat:@"%@",quantityPlusMetric];
