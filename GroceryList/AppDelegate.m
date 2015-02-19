@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [[NSUserDefaults standardUserDefaults] setPersistentDomain:[NSDictionary dictionary] forName:[[NSBundle mainBundle] bundleIdentifier]];
 //    Recipes *firstRecipe = [[Recipes alloc] initWithName:@"Oven Roasted Chicken"
 //                                          andIngredients:@{@"White Wine":@"1 cup",
 //                                                           @"Whole Chicken":@"1",

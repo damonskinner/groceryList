@@ -22,7 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    
+    
+    
+    
     NSLog(@"%@", self.recipeDetails.name);
     self.myTableView.delegate=self;
     self.myTableView.dataSource=self;
@@ -77,32 +80,152 @@
 }
 */
 
-- (IBAction)addToGrocery:(id)sender {
+- (IBAction)addToGrocery:(id)sender
+{
+    UISwitch *addGrocerySwitch = (UISwitch *)sender;
+    
+    NSMutableDictionary *groceryListDictionary;
+    
+    NSMutableDictionary *ingredientsDictionary;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if ( [defaults objectForKey:@"groceryListDictionary"] )
+    {
+        NSDictionary *immutableGroceryListDictionary = [defaults objectForKey:@"groceryListDictionary"];
+        
+        groceryListDictionary = [immutableGroceryListDictionary mutableCopy];
+    }
+    else
+    {
+        groceryListDictionary = [[NSMutableDictionary alloc] init];
+    }
+    
+    if ( addGrocerySwitch.isOn )
+    {
+        //add recipeDetails to NSUserDefaults
+        for (NSInteger i = 0 ; i < [self.recipeDetails.ingredients count] ; i++ )
+        {
+            Ingredient *recipeIngredient = self.recipeDetails.ingredients[i];
+            
+            //if ingredient already exists, get it out of groceryListDictionary,
+            //add to it, and put it back in groceryListDictionary
+            if ( [groceryListDictionary objectForKey:recipeIngredient.name] )
+            {
+                NSDictionary *immutableSavedIngredientsDictionary = groceryListDictionary[recipeIngredient.name];
+                
+                ingredientsDictionary = [immutableSavedIngredientsDictionary mutableCopy];
+                
+                NSNumber *quantity = ingredientsDictionary[@"quantity"];
+                
+                quantity = [NSNumber numberWithInteger:[quantity integerValue] + [recipeIngredient.quantity integerValue]];
+                
+                ingredientsDictionary[@"quantity"] = quantity;
+                
+                groceryListDictionary[recipeIngredient.name] = ingredientsDictionary;
+            }
+            else //otherwise, create it and put it in the groceryListDictionary
+            {
+                ingredientsDictionary = [[NSMutableDictionary alloc] init];
+                
+                ingredientsDictionary[@"quantity"] = recipeIngredient.quantity;
+                ingredientsDictionary[@"metric"] = recipeIngredient.metric;
+                
+                groceryListDictionary[recipeIngredient.name] = ingredientsDictionary;
+            }
+        }
+        
+        [defaults setObject:groceryListDictionary forKey:@"groceryListDictionary"];
+        
+        [defaults synchronize];
+        
+        NSLog(@"Data saved");
+    }
+    else
+    {
+        //remove recipeDetails from NSUserDefaults
+        for (NSInteger i = 0 ; i < [self.recipeDetails.ingredients count] ; i++ )
+        {
+            Ingredient *recipeIngredient = self.recipeDetails.ingredients[i];
+            
+            if ( [groceryListDictionary objectForKey:recipeIngredient.name] )
+            {
+                NSDictionary *immutableSavedIngredientsDictionary = groceryListDictionary[recipeIngredient.name];
+                
+                NSMutableDictionary *savedIngredientsDictionary = [immutableSavedIngredientsDictionary mutableCopy];
+                
+                NSNumber *quantity = savedIngredientsDictionary[@"quantity"];
+                
+                quantity = [NSNumber numberWithInteger:[quantity integerValue] - [recipeIngredient.quantity integerValue]];
+                
+                if ( [quantity integerValue] > 0 )
+                {
+                    savedIngredientsDictionary[@"quantity"] = quantity;
+                    
+                    groceryListDictionary[recipeIngredient.name] = savedIngredientsDictionary;
+                }
+                else
+                {
+                    [groceryListDictionary removeObjectForKey:recipeIngredient.name];
+                }
+            }
+        }
+        
+        [defaults setObject:groceryListDictionary forKey:@"groceryListDictionary"];
+        
+        [defaults synchronize];
+        
+        NSLog(@"Data removed");
+    }
+}
+
+
+
+//- (IBAction)addToGrocery:(id)sender {
 //    UISwitch *addGrocerySwitch = (UISwitch *)sender;
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 //    
 //    if ( addGrocerySwitch.isOn )
 //    {
-//        //add recipeDetails to NSUserDefaults
-//        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//        NSMutableDictionary *groceryList = [defaults objectForKey:@"groceryDictionary"];
 //        
-//        for (NSString *key in self.recipeDetails.ingredients)
-//        {
-//            //            NSString *ingredientAmount = self.recipeDetails.ingredients];
+//        if ([groceryList count] ==0) {
+//            //add recipe ingredients to empty NSUserDefaults dictionary object
+//        
+//            NSMutableDictionary *tempGroceryList = [[NSMutableDictionary alloc] init];
+//            
+//            for (Ingredient *eachIngredient in self.recipeDetails.ingredients)
+//            {
+//                [tempGroceryList setValue:eachIngredient.quantity forKey:eachIngredient.name];
+//            }
+//            
+//            [defaults setObject:tempGroceryList forKey:@"groceryDictionary"];
+//            [defaults synchronize];
+//            
+//        } else if ([groceryList count] !=0) {
+//            NSMutableArray *groceryListKeys = [[groceryList allKeys] mutableCopy];
+//            
+//            for (Ingredient *eachIngredient in self.recipeDetails.ingredients) {
+//                if ([groceryListKeys containsObject:eachIngredient.name]) {
+//                    NSInteger temporaryQuantity = [[groceryList objectForKey:eachIngredient.name] integerValue];
+//                    NSInteger quantityToAdd = [eachIngredient.quantity integerValue];
+//                    NSInteger newQuantity = temporaryQuantity + quantityToAdd;
+//                    eachIngredient.quantity=[NSNumber numberWithInteger:newQuantity];
+//                    
+//                    [groceryList setObject:eachIngredient.quantity forKey:eachIngredient.name];
+//                    
+//                } else {
+//                    [groceryList setObject:eachIngredient.quantity forKey:eachIngredient.name];
+//                }
+//            }
 //        }
+//    }
 //        
-//        //        [defaults setObject:firstName forKey:@"firstName"];
-//        //        [defaults setObject:lastName forKey:@"lastname"];
-//        //        [defaults setInteger:age forKey:@"age"];
-//        //        [defaults setObject:imageData forKey:@"image"];
-//        
-//        [defaults synchronize];
-//        
-//        NSLog(@"Data saved");    }
 //    else
 //    {
 //        //remove recipeDetails from NSUserDefaults
 //        NSLog(@"Switch is off");
+//    }
 //    
-//    
-}
+//}
 @end

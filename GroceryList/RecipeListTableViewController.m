@@ -13,6 +13,7 @@
 
 @interface RecipeListTableViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
+- (IBAction)makeGroceryList:(id)sender;
 
 @end
 
@@ -273,11 +274,22 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    NSIndexPath *indexPath=[self.myTableView indexPathForSelectedRow];
-    RecipeViewController *destination=segue.destinationViewController;
-    destination.recipeDetails=self.recipeList[indexPath.row];
+    if ([segue.identifier isEqualToString:@"recipeView"]) {
+        NSIndexPath *indexPath=[self.myTableView indexPathForSelectedRow];
+        RecipeViewController *destination=segue.destinationViewController;
+        destination.recipeDetails=self.recipeList[indexPath.row];
+    } else if ([segue.identifier isEqualToString:@"groceryList"]){
+        
+    }
+        
+
+    
     
 }
 
 
+- (IBAction)makeGroceryList:(id)sender {
+    
+    
+}
 @end
