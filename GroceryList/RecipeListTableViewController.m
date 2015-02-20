@@ -45,30 +45,48 @@
     Ingredient *lemon = [[Ingredient alloc] initWithName:@"Lemon"
                                              andQuantity:@1
                                                andMetric:@""];
-    NSArray *ingredientList=@[wholeChicken,whiteWine,lemon];
+    Ingredient *salt = [[Ingredient alloc] initWithName:@"Salt"
+                                             andQuantity:@2
+                                               andMetric:@"tsp."];
+    Ingredient *pepper = [[Ingredient alloc] initWithName:@"Pepper"
+                                            andQuantity:@2
+                                              andMetric:@"tsp."];
+    NSArray *ingredientList=@[wholeChicken,whiteWine,lemon,salt,pepper];
     
     Recipes *firstRecipe= [[Recipes alloc] initWithName:@"Oven Roasted Chicken"
                                          andIngredients:ingredientList
-                                          andDirections:@"1.  Rub salt and pepper over chicken.  \n2.  Throw it in the oven.  \n3.  ??? \n4.  Profit"];
+                                          andDirections:@"1.  Pre-heat over to 425 degrees.  \n2.  Rub salt and pepper over chicken.  \n3.  Place chicken in baking dish, roast for 15 minutes.\n4.  Pour wine over chicken.  \n5.  Halve lemon and squeeze over chicken.  \n6.  Continue roasting for another 30 minutes."];
     
     
     Ingredient *soySauce = [[Ingredient alloc] initWithName:@"Soy Sauce"
-                                                    andQuantity:@2
-                                                      andMetric:@"cups"];
+                                                    andQuantity:@4
+                                                      andMetric:@"tbsp."];
     Ingredient *greenOnions = [[Ingredient alloc] initWithName:@"Green Onions"
-                                                 andQuantity:@1
+                                                 andQuantity:@3
                                                    andMetric:@""];
-    Ingredient *steak = [[Ingredient alloc] initWithName:@"Flank Steak"
+    Ingredient *sugar = [[Ingredient alloc] initWithName:@"Sugar"
+                                            andQuantity:@3
+                                              andMetric:@"tbsp."];
+    Ingredient *sirloinSteak = [[Ingredient alloc] initWithName:@"Sirloin Steak"
                                              andQuantity:@1
                                                andMetric:@"lb."];
     Ingredient *sesameOil = [[Ingredient alloc] initWithName:@"Sesame Oil"
-                                             andQuantity:@3
+                                             andQuantity:@2
                                                andMetric:@"tbsp."];
-    ingredientList=@[soySauce,greenOnions,steak,sesameOil];
+    pepper = [[Ingredient alloc] initWithName:@"Pepper"
+                                            andQuantity:@1
+                                              andMetric:@"tsp."];
+    salt = [[Ingredient alloc] initWithName:@"Salt"
+                                            andQuantity:@2
+                                              andMetric:@"tsp."];
+    Ingredient *garlic = [[Ingredient alloc] initWithName:@"Garlic"
+                                            andQuantity:@2
+                                              andMetric:@"cloves"];
+    ingredientList=@[soySauce,greenOnions,sirloinSteak,sesameOil,sugar,pepper,salt];
 
     Recipes *secondRecipe = [[Recipes alloc] initWithName:@"Bulgogi"
                                            andIngredients:ingredientList
-                                            andDirections:@"1.  Chop up green onions up.  Slice steak.  \n2.  Combine oil, sliced steak, soy sauce, and onions.  \n3.  ??? \n4.  Profit"];
+                                            andDirections:@"1.  Slice beef into 1/8 inch slices.  \n2.  Chop green onions, combine with remaining ingredients in mixing bowl.  \n3.  Marinate beef with mixture for at least 30 minutes, preferably overnight. \n4.  Drain beef, stir fry until light brown.  \n5.  Serve over rice."];
     
     
     Ingredient *tomato = [[Ingredient alloc] initWithName:@"Tomato"
@@ -89,7 +107,7 @@
     Ingredient *onion = [[Ingredient alloc] initWithName:@"Onion"
                                                    andQuantity:@1
                                                      andMetric:@""];
-    Ingredient *garlic = [[Ingredient alloc] initWithName:@"Garlic"
+    garlic = [[Ingredient alloc] initWithName:@"Garlic"
                                                    andQuantity:@1
                                                      andMetric:@"clove"];
     Ingredient *celery = [[Ingredient alloc] initWithName:@"Celery"
@@ -98,10 +116,10 @@
     Ingredient *butter = [[Ingredient alloc] initWithName:@"Butter"
                                               andQuantity:@2
                                                 andMetric:@"tbsp."];
-    Ingredient *sugar = [[Ingredient alloc] initWithName:@"Sugar"
+    sugar = [[Ingredient alloc] initWithName:@"Sugar"
                                               andQuantity:@1
                                                 andMetric:@"tsp."];
-    Ingredient *salt = [[Ingredient alloc] initWithName:@"Salt"
+    salt = [[Ingredient alloc] initWithName:@"Salt"
                                              andQuantity:@1
                                                andMetric:@"tsp."];
     Ingredient *mint = [[Ingredient alloc] initWithName:@"Mint"
@@ -124,23 +142,48 @@
                                            andDirections:@"1.  In a large skillet, warm olive oil over low heat; saute onion, garlic and celery until onion is transparent.  \n\n2.  Stir in butter and increase heat to medium; brown beef until no longer pink. Mix in sugar, 1 teaspoon salt, mint and mushrooms; lower heat and stir for about 3 minutes.  \n\n3.  In a large bowl, combine tomato paste and broth; pour liquid and basil to pot. Simmer over very low heat for about 2 hours, stirring occasionally.  \n\n4.  Bring a large pot of water to a vigorous boil with 3 tablespoons salt and 1 teaspoon olive oil. Slip spaghetti into water holding on to ends until strands soften a bit. Cook over high heat for 7 to 8 minutes only. When properly cooked, raw taste should be gone but still have a firm texture.  \n\n5.  When ready to serve, combine pasta with meat sauce; serve on a warmed platter or bowl topped with parsley and Romano cheese."];
     
     
-    tomatoPaste = [[Ingredient alloc] initWithName:@"Tomato Sauce"
-                                                   andQuantity:@2
-                                                     andMetric:@"cups"];
-    groundBeef = [[Ingredient alloc] initWithName:@"Ground Beef"
+    Ingredient *cucumber = [[Ingredient alloc] initWithName:@"Cucumber"
+                                                   andQuantity:@1
+                                                     andMetric:@""];
+    Ingredient *cherryTomatoes = [[Ingredient alloc] initWithName:@"Cherry Tomatoes"
                                                   andQuantity:@1
-                                                    andMetric:@"lb."];
-    Ingredient *bechamel = [[Ingredient alloc] initWithName:@"Bechamel Sauce"
-                                                  andQuantity:@2
-                                                    andMetric:@"cups"];
-    Ingredient *lasagnaPasta = [[Ingredient alloc] initWithName:@"Lasagna Pasta"
-                                                 andQuantity:@1
-                                                   andMetric:@"box"];
-    ingredientList=@[tomatoPaste,groundBeef,lasagnaPasta,bechamel];
+                                                    andMetric:@"cup"];
+    Ingredient *yellowPepper = [[Ingredient alloc] initWithName:@"Yellow Pepper"
+                                                  andQuantity:@1
+                                                    andMetric:@""];
+    Ingredient *shallot = [[Ingredient alloc] initWithName:@"Shallot"
+                                                 andQuantity:@4
+                                                   andMetric:@"tbsp."];
+    Ingredient *cilantro = [[Ingredient alloc] initWithName:@"Fresh Cilantro"
+                                            andQuantity:@2
+                                              andMetric:@"tbsp."];
+    Ingredient *limeJuice = [[Ingredient alloc] initWithName:@"Lime Juice"
+                                            andQuantity:@2
+                                              andMetric:@"tbsp."];
+    Ingredient *canolaOil= [[Ingredient alloc] initWithName:@"Canola Oil"
+                                                andQuantity:@3
+                                                  andMetric:@"tsp."];
+    Ingredient *honey = [[Ingredient alloc] initWithName:@"Honey"
+                                            andQuantity:@2
+                                              andMetric:@"tsp."];
+    Ingredient *redPepperFlakes = [[Ingredient alloc] initWithName:@"Red Pepper Flakes"
+                                            andQuantity:@1
+                                              andMetric:@"tsp."];
+    salt = [[Ingredient alloc] initWithName:@"Salt"
+                                            andQuantity:@2
+                                              andMetric:@"tsp."];
+    pepper = [[Ingredient alloc] initWithName:@"Pepper"
+                                            andQuantity:@1
+                                              andMetric:@"tsp."];
+    Ingredient *salmon = [[Ingredient alloc] initWithName:@"Salmon Fillet"
+                                            andQuantity:@4
+                                              andMetric:@""];
     
-    Recipes *fourthRecipe = [[Recipes alloc] initWithName:@"Lasagna"
+    ingredientList=@[cucumber,cherryTomatoes,yellowPepper,shallot,cilantro,limeJuice,canolaOil,honey,redPepperFlakes,salt,pepper,salmon];
+    
+    Recipes *fourthRecipe = [[Recipes alloc] initWithName:@"Seared Salmon with Cilantro Cucumber Salsa"
                                            andIngredients:ingredientList
-                                            andDirections:@"1.  Chop tomatoes.  \n2.  Boil lasagna sheets.  \n3.  Heat tomato sauce.  \n4.  ??? \n4.  Profit"];
+                                            andDirections:@"1.  Pre-heat oven to 375 degrees.  \n2.  Peel, seed, and chop cucumber.  Quarter cherry tomatoes.  Seed yellow pepper and julienne.  Chop shallot and cilantro.  \n3.  Combine cucumber, tomatoes, yellow pepper, shallot, and cilantro.  Toss gently to mix.  \n4.  Whisk together lime juice, 2 tsp. canola oil, honey, red pepper, and 1 tsp. salt.\n4.  Pour lime juice mixture over cucumber salad, and mix to coat evenly.  \n5.  Sprinkle salmon with salt and pepper to taste.  Heat remaining oil in large non-stick pan.  \n6.  Cook salmon skin side down until skin is crisp.  \n7.  Remove from pan and place in oven in oven safe pan.  Cook until salmon is cooked through, roughly 8-10 minutes.  \n8.  Remove from oven, serve with cucumber salsa."];
     
     
     tomato = [[Ingredient alloc] initWithName:@"Tomato"
@@ -162,27 +205,34 @@
                                            andDirections:@"1.  Chop tomatoes and lettuce.  \n2.  Grill chicken.  \n3.  ??? \n4.  Profit"];
     
     
-    tomato = [[Ingredient alloc] initWithName:@"Tomato"
+    salmon = [[Ingredient alloc] initWithName:@"Salmon Fillet"
                                   andQuantity:@1
                                     andMetric:@""];
-    Ingredient *parmesanCheese = [[Ingredient alloc] initWithName:@"Grated Parmesan Cheese"
+    salt = [[Ingredient alloc] initWithName:@"Salt"
+                                            andQuantity:@1
+                                              andMetric:@"tsp."];
+    pepper = [[Ingredient alloc] initWithName:@"Pepper"
+                                            andQuantity:@1
+                                              andMetric:@"tsp."];
+    Ingredient *lime = [[Ingredient alloc] initWithName:@"Lime"
                                                       andQuantity:@1
-                                                        andMetric:@"cup"];
-    chickenBreast = [[Ingredient alloc] initWithName:@"Chicken Breast"
-                                                     andQuantity:@1
-                                                       andMetric:@"lb."];
-    Ingredient *breadCrumbs = [[Ingredient alloc] initWithName:@"Bread Crumbs"
-                                                      andQuantity:@2
-                                                        andMetric:@"cups"];
-    ingredientList=@[parmesanCheese,chickenBreast,breadCrumbs,tomato];
+                                                        andMetric:@""];
+    soySauce = [[Ingredient alloc] initWithName:@"Soy Sauce"
+                                            andQuantity:@1
+                                              andMetric:@"tsp."];
+    Ingredient *vinegar = [[Ingredient alloc] initWithName:@"Vinegar"
+                                            andQuantity:@2
+                                              andMetric:@"tsp."];
     
-    Recipes *sixthRecipe = [[Recipes alloc] initWithName:@"Chicken Parmesan"
+    ingredientList=@[salmon,salt,pepper,lime,soySauce,vinegar];
+    
+    Recipes *sixthRecipe = [[Recipes alloc] initWithName:@"Pan Seared Salmon"
                                           andIngredients:ingredientList
-                                           andDirections:@"1.  Chop tomatoes.  \n2.  Bread chicken.  \n3.  ??? \n4.  Profit"];
+                                           andDirections:@"1.  Sprinkle salmon with salt and pepper to taste.  Heat remaining oil in large non-stick pan.  \n2.  Cook salmon skin side down until skin is crisp.  \n3.  Remove from pan and place in oven in oven safe pan.  Cook until salmon is cooked through, roughly 8-10 minutes.  \n4.  While salmon is cooking, combine soy sauce, vinegar, and juice from half a lime for dipping sauce."];
     
     
     
-    steak = [[Ingredient alloc] initWithName:@"Flank Steak"
+    Ingredient *flankSteak = [[Ingredient alloc] initWithName:@"Flank Steak"
                                   andQuantity:@1
                                     andMetric:@"lb."];
     butter = [[Ingredient alloc] initWithName:@"Butter"
@@ -191,11 +241,18 @@
     garlic = [[Ingredient alloc] initWithName:@"Garlic"
                                          andQuantity:@1
                                            andMetric:@"clove"];
-    ingredientList=@[steak,butter,garlic];
+    salt = [[Ingredient alloc] initWithName:@"Salt"
+                                  andQuantity:@1
+                                    andMetric:@"tsp."];
+    pepper = [[Ingredient alloc] initWithName:@"Pepper"
+                                  andQuantity:@1
+                                    andMetric:@"tsp."];
+    
+    ingredientList=@[flankSteak,butter,garlic];
     
     Recipes *seventhRecipe = [[Recipes alloc] initWithName:@"Steak"
                                             andIngredients:ingredientList
-                                             andDirections:@"1.  Chop garlic.  \n2.  Pan sear steak.  \n3.  ??? \n4.  Profit"];
+                                             andDirections:@"1.  Pre-heat oven to 400 degrees.  \n2.  Sprinkle salt and pepper on both sides of  steak to taste.  \n3.  Heat oil in non-stick oven-safe pan over high heat until shimmering.  \n4.  Sear steak on both sides, roughly 2 minutes each.  \n5.  Remove pan from heat.  \n6.  Crush garlic, and place butter and garlic on top of steak.  \n7.  Finish steak in oven to desired doneness."];
     
     self.recipeList = [[NSArray alloc] initWithObjects:firstRecipe, secondRecipe, thirdRecipe, fourthRecipe, fifthRecipe, sixthRecipe, seventhRecipe, nil];
     

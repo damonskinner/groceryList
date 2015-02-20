@@ -16,24 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLl-Zf-tUR">
-                                <rect key="frame" x="16" y="19" width="288" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glo-Zk-QTN">
-                                <rect key="frame" x="94" y="518" width="120" height="30"/>
-                                <state key="normal" title="View Grocery List">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="makeGroceryList:" destination="lcl-1C-Udm" eventType="touchUpInside" id="2dE-bz-8t9"/>
-                                    <segue destination="YZl-dl-GZt" kind="push" identifier="groceryList" id="759-ek-6uY"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BTo-KW-uQq">
-                                <rect key="frame" x="16" y="64" width="288" height="409"/>
+                                <rect key="frame" x="16" y="79" width="288" height="453"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="basicCell" id="ICL-oO-uZT">
@@ -41,14 +25,27 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ICL-oO-uZT" id="IhN-N9-ews">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" red="0.50588235290000005" green="0.0" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="zfX-tm-rAM" kind="push" identifier="recipeView" id="nJd-bL-9Xu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glo-Zk-QTN">
+                                <rect key="frame" x="94" y="530" width="120" height="30"/>
+                                <size key="titleShadowOffset" width="-1" height="2"/>
+                                <state key="normal" title="View Grocery List">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeGroceryList:" destination="lcl-1C-Udm" eventType="touchUpInside" id="2dE-bz-8t9"/>
+                                    <segue destination="YZl-dl-GZt" kind="push" identifier="groceryList" id="759-ek-6uY"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.42352941179999998" green="0.0" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="f5P-pd-zsl"/>
                     <connections>
@@ -71,17 +68,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oh-H4-uPI">
-                                <rect key="frame" x="231" y="530" width="73" height="30"/>
-                                <state key="normal" title="Clear List">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearList:" destination="YZl-dl-GZt" eventType="touchUpInside" id="A3l-dU-buv"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fIs-Of-YKu">
-                                <rect key="frame" x="16" y="67" width="288" height="455"/>
+                                <rect key="frame" x="16" y="80" width="288" height="450"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="basicCell" textLabel="1aO-65-S1B" detailTextLabel="EBG-rM-29W" style="IBUITableViewCellStyleValue1" id="47S-9E-9ZD">
@@ -106,11 +94,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oh-H4-uPI">
+                                <rect key="frame" x="231" y="530" width="73" height="30"/>
+                                <size key="titleShadowOffset" width="-1" height="2"/>
+                                <state key="normal" title="Clear List">
+                                    <color key="titleColor" red="1" green="0.99235091695307964" blue="0.98019568593757633" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearList:" destination="YZl-dl-GZt" eventType="touchUpInside" id="A3l-dU-buv"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.42352941176470588" green="0.0" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="XWt-fZ-4lN">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="rGt-TB-c43">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="pUn-lT-sYO" kind="push" id="OP8-gl-dYg"/>
                             </connections>
@@ -136,33 +136,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYr-Gp-ROH">
-                                <rect key="frame" x="137" y="448" width="46" height="30"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addGroceryButton:" destination="pUn-lT-sYO" eventType="touchUpInside" id="xVf-B3-Tte"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOJ-x6-f28">
-                                <rect key="frame" x="129" y="195" width="42" height="21"/>
+                                <rect key="frame" x="129" y="154" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.98281020893501359" green="0.98970490914032239" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="-1" height="2"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eWe-HC-Pmb">
-                                <rect key="frame" x="0.0" y="261" width="320" height="162"/>
+                                <rect key="frame" x="16" y="194" width="288" height="180"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="pUn-lT-sYO" id="FTA-u0-nb2"/>
                                     <outlet property="delegate" destination="pUn-lT-sYO" id="66e-gg-SVz"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbJ-J3-mm7">
-                                <rect key="frame" x="48" y="195" width="73" height="21"/>
+                                <rect key="frame" x="48" y="154" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.98704165928645793" green="1" blue="0.99536547439935685" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="-1" height="2"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Grocery Item" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WTl-0h-qWQ">
                                 <rect key="frame" x="48" y="107" width="225" height="30"/>
@@ -170,13 +166,25 @@
                                 <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="done"/>
                             </textField>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zDb-e2-3ka">
-                                <rect key="frame" x="179" y="191" width="94" height="29"/>
+                                <rect key="frame" x="179" y="150" width="94" height="29"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="addGroceryQuantityAction:" destination="pUn-lT-sYO" eventType="valueChanged" id="OTY-tL-qza"/>
                                 </connections>
                             </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYr-Gp-ROH">
+                                <rect key="frame" x="137" y="382" width="46" height="30"/>
+                                <size key="titleShadowOffset" width="-1" height="2"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.95984245628168252" green="0.946577369034306" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addGroceryButton:" destination="pUn-lT-sYO" eventType="touchUpInside" id="xVf-B3-Tte"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.42352941179999998" green="0.0" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="sie-9R-2VM"/>
                     <connections>
@@ -199,11 +207,11 @@
                         <viewControllerLayoutGuide type="bottom" id="iip-Xq-42J"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eyz-np-fwl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="c51-Ub-Nsw">
-                                <rect key="frame" x="0.0" y="67" width="320" height="257"/>
+                                <rect key="frame" x="16" y="67" width="288" height="247"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicCell" textLabel="9R4-cl-ArT" detailTextLabel="PUG-Dl-LcD" style="IBUITableViewCellStyleValue1" id="AhW-fc-4MP">
@@ -232,18 +240,22 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add to grocery list:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XO-8U-A5j">
                                 <rect key="frame" x="101" y="13" width="146" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="-1" height="2"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0EY-0H-6kP">
                                 <rect key="frame" x="255" y="8" width="51" height="31"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="onTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="addToGrocery:" destination="zfX-tm-rAM" eventType="valueChanged" id="kHr-hH-67G"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wip-lp-ptT">
-                                <rect key="frame" x="0.0" y="47" width="320" height="21"/>
-                                <color key="backgroundColor" red="0.73725490196078436" green="0.062745098039215685" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="42" width="320" height="21"/>
+                                <color key="backgroundColor" red="0.97888316276172482" green="0.99891300939903971" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -251,14 +263,15 @@
                                 <size key="shadowOffset" width="-1" height="2"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHd-6y-KDa">
-                                <rect key="frame" x="16" y="342" width="288" height="154"/>
+                                <rect key="frame" x="16" y="334" width="288" height="150"/>
                                 <color key="backgroundColor" red="0.91414141414141414" green="0.91414141414141414" blue="0.91414141414141414" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.22207089275103986" green="0.0" blue="0.024595381078911186" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Directions:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="br7-Gd-Cdw">
-                                <rect key="frame" x="0.0" y="322" width="320" height="21"/>
-                                <color key="backgroundColor" red="0.72388591800356505" green="0.064218060635084825" blue="0.013235158357449416" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="313" width="320" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.99757216496560841" blue="0.99080084216566555" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -266,7 +279,7 @@
                                 <size key="shadowOffset" width="-1" height="2"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.42352941179999998" green="0.0" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="JMC-8V-r0v"/>
@@ -285,9 +298,15 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zbv-pX-yAg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cjF-Ad-ecR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="cjF-Ad-ecR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.42352941179999998" green="0.0" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="-1" vertical="2"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
