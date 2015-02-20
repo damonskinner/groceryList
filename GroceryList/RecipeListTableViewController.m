@@ -254,7 +254,55 @@
                                             andIngredients:ingredientList
                                              andDirections:@"1.  Pre-heat oven to 400 degrees.  \n2.  Sprinkle salt and pepper on both sides of  steak to taste.  \n3.  Heat oil in non-stick oven-safe pan over high heat until shimmering.  \n4.  Sear steak on both sides, roughly 2 minutes each.  \n5.  Remove pan from heat.  \n6.  Crush garlic, and place butter and garlic on top of steak.  \n7.  Finish steak in oven to desired doneness."];
     
-    self.recipeList = [[NSArray alloc] initWithObjects:firstRecipe, secondRecipe, thirdRecipe, fourthRecipe, fifthRecipe, sixthRecipe, seventhRecipe, nil];
+    Ingredient *brusselSprouts = [[Ingredient alloc] initWithName:@"Brussel Sprouts"
+                                                    andQuantity:@2
+                                                      andMetric:@"cups"];
+    canolaOil = [[Ingredient alloc] initWithName:@"Canola Oil"
+                                  andQuantity:@1
+                                    andMetric:@"tbsp."];
+    Ingredient *bacon = [[Ingredient alloc] initWithName:@"Bacon"
+                                  andQuantity:@1
+                                    andMetric:@"cup"];
+    salt = [[Ingredient alloc] initWithName:@"Salt"
+                                andQuantity:@1
+                                  andMetric:@"tsp."];
+    pepper = [[Ingredient alloc] initWithName:@"Pepper"
+                                  andQuantity:@1
+                                    andMetric:@"tsp."];
+    Ingredient *mapleSyrup = [[Ingredient alloc] initWithName:@"Maple Syrup"
+                                  andQuantity:@2
+                                    andMetric:@"tbsp."];
+    
+    ingredientList=@[brusselSprouts,canolaOil,bacon,salt,pepper,mapleSyrup];
+    
+    Recipes *eighthRecipe = [[Recipes alloc] initWithName:@"Brussel Sprouts w/ Bacon and Maple Glaze"
+                                            andIngredients:ingredientList
+                                             andDirections:@"1.  Pre-heat oven to 425 degrees.  \n2.  Quarter the brussel sprouts then coat with canola oil.  Season with salt and pepper.  \n3.  Chop bacon roughly.  Combine with brussel sprouts and mix.  \n4.  Roast in oven for roughly 20-25 minutes, until sprouts are cooked and bacon is crispy.  \n5.  Remove from oven, pour maple syrup over sprouts and mix to coat."];
+    
+    
+    Ingredient *bananas = [[Ingredient alloc] initWithName:@"Bananas"
+                                                      andQuantity:@8
+                                                        andMetric:@""];
+    sugar = [[Ingredient alloc] initWithName:@"Sugar"
+                                     andQuantity:@2
+                                       andMetric:@"cups"];
+    butter = [[Ingredient alloc] initWithName:@"Butter"
+                                             andQuantity:@1
+                                               andMetric:@"cup"];
+    Ingredient *heavyCream = [[Ingredient alloc] initWithName:@"Heavy Cream"
+                                andQuantity:@2
+                                  andMetric:@"cups"];
+    Ingredient *vanillaIceCream = [[Ingredient alloc] initWithName:@"Vanilla Ice Cream"
+                                                  andQuantity:@1
+                                                    andMetric:@"gal."];
+    
+    ingredientList=@[bananas, sugar, butter, heavyCream, vanillaIceCream];
+    
+    Recipes *ninthRecipe = [[Recipes alloc] initWithName:@"Ice Cream w/ Bananas in Caramel Sauce"
+                                           andIngredients:ingredientList
+                                            andDirections:@"1.  Peal and halve, lengthwise, the bananas.  \n2.  Melt butter in large skillet over medium heat.  Stir in sugar and cook, until sugar is melted and light brown.  \n3.  Slowly stir in cream, let boil for 1 minute.  \n4.  Place bananas in pan and cook until heated through, about 2 minutes.  \n5.  Serve over vanilla ice cream."];
+    
+    self.recipeList = [[NSArray alloc] initWithObjects:firstRecipe, secondRecipe, thirdRecipe, fourthRecipe, fifthRecipe, sixthRecipe, seventhRecipe, eighthRecipe, ninthRecipe, nil];
     
 //    Recipes *tempRecipe = self.recipeList[0];
 //    NSLog(@"%@",[tempRecipe.ingredients objectForKey:@"White Wine"]);
