@@ -67,7 +67,7 @@
     Ingredient *sugar = [[Ingredient alloc] initWithName:@"Sugar"
                                             andQuantity:@3
                                               andMetric:@"tbsp."];
-    Ingredient *sirloinSteak = [[Ingredient alloc] initWithName:@"Sirloin Steak"
+    Ingredient *flankSteak = [[Ingredient alloc] initWithName:@"Flank Steak"
                                              andQuantity:@1
                                                andMetric:@"lb."];
     Ingredient *sesameOil = [[Ingredient alloc] initWithName:@"Sesame Oil"
@@ -82,7 +82,7 @@
     Ingredient *garlic = [[Ingredient alloc] initWithName:@"Garlic"
                                             andQuantity:@2
                                               andMetric:@"cloves"];
-    ingredientList=@[soySauce,greenOnions,sirloinSteak,sesameOil,sugar,pepper,salt];
+    ingredientList=@[soySauce,greenOnions,flankSteak,sesameOil,sugar,pepper,salt];
 
     Recipes *secondRecipe = [[Recipes alloc] initWithName:@"Bulgogi"
                                            andIngredients:ingredientList
@@ -232,7 +232,7 @@
     
     
     
-    Ingredient *flankSteak = [[Ingredient alloc] initWithName:@"Flank Steak"
+    Ingredient *sirloinSteak = [[Ingredient alloc] initWithName:@"Sirloin Steak"
                                   andQuantity:@1
                                     andMetric:@"lb."];
     butter = [[Ingredient alloc] initWithName:@"Butter"
@@ -248,7 +248,7 @@
                                   andQuantity:@1
                                     andMetric:@"tsp."];
     
-    ingredientList=@[flankSteak,butter,garlic];
+    ingredientList=@[sirloinSteak,butter,garlic,salt, pepper];
     
     Recipes *seventhRecipe = [[Recipes alloc] initWithName:@"Steak"
                                             andIngredients:ingredientList
