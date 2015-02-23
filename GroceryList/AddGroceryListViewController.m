@@ -38,13 +38,30 @@
     
 }
 
-- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
+//- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
+//{
+//    
+//    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:self.arrayMetric[row] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:@"Chalkduster"}];
+//    
+//    return attString;
+//    
+//}
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 {
-    
-    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:self.arrayMetric[row] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:@"Chalkduster"}];
-    
-    return attString;
-    
+    UILabel* tView = (UILabel*)view;
+    if (!tView)
+    {
+        tView = [[UILabel alloc] init];
+        [tView setFont:[UIFont fontWithName:@"Chalkduster" size:25]];
+        tView.textColor=[UIColor whiteColor];
+        
+        [tView setTextAlignment:UITextAlignmentCenter];
+        tView.numberOfLines=1;
+    }
+    // Fill the label text here
+    tView.text=[self.arrayMetric objectAtIndex:row];
+    return tView;
 }
 
 - (void)didReceiveMemoryWarning {
