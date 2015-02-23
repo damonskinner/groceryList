@@ -40,7 +40,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    FAKFontAwesome *cartIcon = [FAKFontAwesome shoppingCartIconWithSize:35];
+    FAKFontAwesome *cartIcon = [FAKFontAwesome shoppingCartIconWithSize:40];
     [cartIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
     
     
@@ -98,7 +98,7 @@
     Recipes *secondRecipe = [[Recipes alloc] initWithName:@"Bulgogi"
                                            andIngredients:ingredientList
                                             andDirections:@"1.  Slice beef into 1/8 inch slices.  \n\n2.  Chop green onions, combine with remaining ingredients in mixing bowl.  \n\n3.  Marinate beef with mixture for at least 30 minutes, preferably overnight. \n\n4.  Drain beef, stir fry until light brown.  \n\n5.  Serve over rice."
-                                             andImageName:@"bulgogiplate.JPG"];
+                                             andImageName:@"bulgogi.jpeg"];
     
     
     Ingredient *tomato = [[Ingredient alloc] initWithName:@"Tomato"
@@ -244,7 +244,7 @@
     Recipes *sixthRecipe = [[Recipes alloc] initWithName:@"Pan Seared Salmon"
                                           andIngredients:ingredientList
                                            andDirections:@"1.  Sprinkle salmon with salt and pepper to taste.  Heat remaining oil in large non-stick pan.  \n\n2.  Cook salmon skin side down until skin is crisp.  \n\n3.  Remove from pan and place in oven in oven safe pan.  Cook until salmon is cooked through, roughly 8-10 minutes.  \n\n4.  While salmon is cooking, combine soy sauce, vinegar, and juice from half a lime for dipping sauce."
-                                            andImageName:@"searedsalmon.jpg"];
+                                            andImageName:@"searedsalmon.jpeg"];
     
     
     
@@ -358,6 +358,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.font = [UIFont fontWithName:@"Chalkduster" size:14];
+    cell.textLabel.textColor = [UIColor whiteColor];
     Recipes *tempRecipe= self.recipeList[indexPath.row];
     cell.textLabel.text=[NSString stringWithFormat:@"%@",tempRecipe.name];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

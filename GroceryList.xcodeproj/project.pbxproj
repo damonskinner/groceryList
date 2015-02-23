@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36346C3B1A9B8082005BF3F1 /* dark_wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 36346C3A1A9B8082005BF3F1 /* dark_wood.png */; };
+		36346C3E1A9B80FF005BF3F1 /* bulgogi.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 36346C3C1A9B80FF005BF3F1 /* bulgogi.jpeg */; };
+		36346C3F1A9B80FF005BF3F1 /* searedsalmon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 36346C3D1A9B80FF005BF3F1 /* searedsalmon.jpeg */; };
 		367FD2DF1A9AC445000A195C /* bananasicecream.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2D61A9AC445000A195C /* bananasicecream.jpg */; };
 		367FD2E01A9AC445000A195C /* brusselsprouts.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2D71A9AC445000A195C /* brusselsprouts.jpg */; };
-		367FD2E11A9AC445000A195C /* bulgogiplate.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2D81A9AC445000A195C /* bulgogiplate.JPG */; };
 		367FD2E21A9AC445000A195C /* caesar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2D91A9AC445000A195C /* caesar.jpg */; };
 		367FD2E31A9AC445000A195C /* steak.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2DA1A9AC445000A195C /* steak.jpeg */; };
 		367FD2E41A9AC445000A195C /* chicken.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2DB1A9AC445000A195C /* chicken.jpg */; };
 		367FD2E51A9AC445000A195C /* salmoncucumber.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2DC1A9AC445000A195C /* salmoncucumber.jpg */; };
-		367FD2E61A9AC445000A195C /* searedsalmon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2DD1A9AC445000A195C /* searedsalmon.jpg */; };
 		367FD2E71A9AC445000A195C /* spaghetti.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2DE1A9AC445000A195C /* spaghetti.jpg */; };
 		367FD2EA1A9AC4A1000A195C /* ParallaxRecipeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FD2E91A9AC4A1000A195C /* ParallaxRecipeTableViewController.m */; };
 		367FD2EC1A9AE656000A195C /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2EB1A9AE656000A195C /* images.jpeg */; };
@@ -46,14 +47,15 @@
 
 /* Begin PBXFileReference section */
 		0D4AF2E40DA8C3BD2D2588E8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		36346C3A1A9B8082005BF3F1 /* dark_wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark_wood.png; sourceTree = SOURCE_ROOT; };
+		36346C3C1A9B80FF005BF3F1 /* bulgogi.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bulgogi.jpeg; sourceTree = SOURCE_ROOT; };
+		36346C3D1A9B80FF005BF3F1 /* searedsalmon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = searedsalmon.jpeg; sourceTree = SOURCE_ROOT; };
 		367FD2D61A9AC445000A195C /* bananasicecream.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bananasicecream.jpg; sourceTree = SOURCE_ROOT; };
 		367FD2D71A9AC445000A195C /* brusselsprouts.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brusselsprouts.jpg; sourceTree = SOURCE_ROOT; };
-		367FD2D81A9AC445000A195C /* bulgogiplate.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bulgogiplate.JPG; sourceTree = SOURCE_ROOT; };
 		367FD2D91A9AC445000A195C /* caesar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = caesar.jpg; sourceTree = SOURCE_ROOT; };
 		367FD2DA1A9AC445000A195C /* steak.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = steak.jpeg; sourceTree = SOURCE_ROOT; };
 		367FD2DB1A9AC445000A195C /* chicken.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chicken.jpg; sourceTree = SOURCE_ROOT; };
 		367FD2DC1A9AC445000A195C /* salmoncucumber.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = salmoncucumber.jpg; sourceTree = SOURCE_ROOT; };
-		367FD2DD1A9AC445000A195C /* searedsalmon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = searedsalmon.jpg; sourceTree = SOURCE_ROOT; };
 		367FD2DE1A9AC445000A195C /* spaghetti.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spaghetti.jpg; sourceTree = SOURCE_ROOT; };
 		367FD2E81A9AC4A1000A195C /* ParallaxRecipeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxRecipeTableViewController.h; sourceTree = "<group>"; };
 		367FD2E91A9AC4A1000A195C /* ParallaxRecipeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxRecipeTableViewController.m; sourceTree = "<group>"; };
@@ -108,16 +110,17 @@
 		367FD2D51A9AC426000A195C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				36346C3A1A9B8082005BF3F1 /* dark_wood.png */,
 				367FD2D61A9AC445000A195C /* bananasicecream.jpg */,
 				367FD2EB1A9AE656000A195C /* images.jpeg */,
 				367FD2D71A9AC445000A195C /* brusselsprouts.jpg */,
 				367FD2ED1A9AE738000A195C /* scratchybackground.jpg */,
-				367FD2D81A9AC445000A195C /* bulgogiplate.JPG */,
+				36346C3C1A9B80FF005BF3F1 /* bulgogi.jpeg */,
+				36346C3D1A9B80FF005BF3F1 /* searedsalmon.jpeg */,
 				367FD2D91A9AC445000A195C /* caesar.jpg */,
 				367FD2DA1A9AC445000A195C /* steak.jpeg */,
 				367FD2DB1A9AC445000A195C /* chicken.jpg */,
 				367FD2DC1A9AC445000A195C /* salmoncucumber.jpg */,
-				367FD2DD1A9AC445000A195C /* searedsalmon.jpg */,
 				367FD2DE1A9AC445000A195C /* spaghetti.jpg */,
 			);
 			name = Images;
@@ -297,19 +300,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36346C3F1A9B80FF005BF3F1 /* searedsalmon.jpeg in Resources */,
 				367FD2E21A9AC445000A195C /* caesar.jpg in Resources */,
 				367FD2E41A9AC445000A195C /* chicken.jpg in Resources */,
-				367FD2E61A9AC445000A195C /* searedsalmon.jpg in Resources */,
 				367FD2E01A9AC445000A195C /* brusselsprouts.jpg in Resources */,
 				36BBC91D1A94F7CC001BBA5F /* Main.storyboard in Resources */,
 				36BBC9221A94F7CC001BBA5F /* LaunchScreen.xib in Resources */,
 				367FD2EE1A9AE738000A195C /* scratchybackground.jpg in Resources */,
 				367FD2E51A9AC445000A195C /* salmoncucumber.jpg in Resources */,
 				36BBC91F1A94F7CC001BBA5F /* Images.xcassets in Resources */,
+				36346C3E1A9B80FF005BF3F1 /* bulgogi.jpeg in Resources */,
 				367FD2EC1A9AE656000A195C /* images.jpeg in Resources */,
 				367FD2E31A9AC445000A195C /* steak.jpeg in Resources */,
+				36346C3B1A9B8082005BF3F1 /* dark_wood.png in Resources */,
 				367FD2E71A9AC445000A195C /* spaghetti.jpg in Resources */,
-				367FD2E11A9AC445000A195C /* bulgogiplate.JPG in Resources */,
 				367FD2DF1A9AC445000A195C /* bananasicecream.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

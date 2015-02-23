@@ -33,9 +33,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view
     self.addGroceryName.delegate = self;
-    self.background.image= [UIImage imageNamed: @"scratchybackground.jpg"];
 
     self.arrayMetric = [[NSArray alloc] initWithObjects:@"---", @"count", @"cup", @"dz.", @"gal.", @"kg.", @"lb.", @"oz.", @"pt.", @"qrt.", @"tbsp.", @"tsp.", nil];
+    
+}
+
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    
+    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:self.arrayMetric[row] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:@"Chalkduster"}];
+    
+    return attString;
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -26,6 +26,10 @@
     
     
     [self.tableView addParallaxWithImage:[UIImage imageNamed:self.recipeDetails.imageName] andHeight:240];
+//    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"scratchybackground.jpg"]];
+    self.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"dark_wood.png"]];
+    
+    
     self.title = self.recipeDetails.name;
 //    self.directionsLabel.text=self.recipeDetails.directions;
     
@@ -76,6 +80,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
     
+    cell.backgroundColor = [UIColor clearColor];
+    
+    
     if (indexPath.row < [self.recipeDetails.ingredients count]){
         cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell" forIndexPath:indexPath];
         
@@ -86,9 +93,14 @@
         
         NSString *quantityAndMetric=[NSString stringWithFormat:@"%@ %@",passedIngredients.quantity,passedIngredients.metric];
         
+        cell.textLabel.font = [UIFont fontWithName:@"Chalkduster" size:16];
+        cell.textLabel.textColor = [UIColor whiteColor];
         cell.textLabel.text=[NSString stringWithFormat:@"%@",passedIngredients.name];
+        cell.detailTextLabel.font = [UIFont fontWithName:@"Chalkduster" size:15];
         cell.detailTextLabel.text=[NSString stringWithFormat:@"%@",quantityAndMetric];
     } else {
+        cell.textLabel.font = [UIFont fontWithName:@"Chalkduster" size:18];
+        cell.textLabel.textColor = [UIColor whiteColor];
         cell = [tableView dequeueReusableCellWithIdentifier:@"directionsCell" forIndexPath:indexPath];
         
     }

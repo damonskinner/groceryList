@@ -61,6 +61,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    
     self.groceryKeys = [self.groceries allKeys];
     cell.textLabel.text=[[NSString stringWithFormat:@"%@",self.groceryKeys[indexPath.row]]capitalizedString];
     NSDictionary *ingredientDictionary = [self.groceries objectForKey:self.groceryKeys[indexPath.row]];
