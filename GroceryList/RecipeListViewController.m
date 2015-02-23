@@ -6,20 +6,23 @@
 //  Copyright (c) 2015 Damon Skinner. All rights reserved.
 //
 
-#import "RecipeListTableViewController.h"
-#import "RecipeTableViewController.h"
+#import "RecipeListViewController.h"
+#import "ParallaxRecipeTableViewController.h"
 #import "Recipes.h"
-#import "RecipeViewController.h"
+#import "DirectionsViewController.h"
 #import "Ingredient.h"
+#import "FontAwesomeKit.h"
 
-@interface RecipeListTableViewController ()
+
+@interface RecipeListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (weak, nonatomic) IBOutlet UIButton *groceryListButton;
 
 - (IBAction)makeGroceryList:(id)sender;
 
 @end
 
-@implementation RecipeListTableViewController
+@implementation RecipeListViewController
 
 -(void)viewWillAppear:(BOOL)animated  {
     [super viewWillAppear:animated];
@@ -36,6 +39,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    FAKFontAwesome *cartIcon = [FAKFontAwesome shoppingCartIconWithSize:35];
+    [cartIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+    
+    
+    [self.groceryListButton setAttributedTitle:[cartIcon attributedString] forState:UIControlStateNormal];
     
     Ingredient *wholeChicken = [[Ingredient alloc] initWithName:@"Whole Chicken"
                                                     andQuantity:@1
@@ -56,7 +65,7 @@
     
     Recipes *firstRecipe= [[Recipes alloc] initWithName:@"Oven Roasted Chicken"
                                          andIngredients:ingredientList
-                                          andDirections:@"1.  Pre-heat over to 425 degrees.  \n2.  Rub salt and pepper over chicken.  \n3.  Place chicken in baking dish, roast for 15 minutes.\n4.  Pour wine over chicken.  \n5.  Halve lemon and squeeze over chicken.  \n6.  Continue roasting for another 30 minutes."
+                                          andDirections:@"1.  Pre-heat over to 425 degrees.  \n\n2.  Rub salt and pepper over chicken.  \n\n3.  Place chicken in baking dish, roast for 15 minutes.\n\n4.  Pour wine over chicken.  \n\n5.  Halve lemon and squeeze over chicken.  \n\n6.  Continue roasting for another 30 minutes."
                                            andImageName:@"chicken.jpg"];
     
     
@@ -88,8 +97,8 @@
 
     Recipes *secondRecipe = [[Recipes alloc] initWithName:@"Bulgogi"
                                            andIngredients:ingredientList
-                                            andDirections:@"1.  Slice beef into 1/8 inch slices.  \n2.  Chop green onions, combine with remaining ingredients in mixing bowl.  \n3.  Marinate beef with mixture for at least 30 minutes, preferably overnight. \n4.  Drain beef, stir fry until light brown.  \n5.  Serve over rice."
-                                             andImageName:@"bulgogiplate.jpg"];
+                                            andDirections:@"1.  Slice beef into 1/8 inch slices.  \n\n2.  Chop green onions, combine with remaining ingredients in mixing bowl.  \n\n3.  Marinate beef with mixture for at least 30 minutes, preferably overnight. \n\n4.  Drain beef, stir fry until light brown.  \n\n5.  Serve over rice."
+                                             andImageName:@"bulgogiplate.JPG"];
     
     
     Ingredient *tomato = [[Ingredient alloc] initWithName:@"Tomato"
@@ -187,7 +196,7 @@
     
     Recipes *fourthRecipe = [[Recipes alloc] initWithName:@"Seared Salmon with Cilantro Cucumber Salsa"
                                            andIngredients:ingredientList
-                                            andDirections:@"1.  Pre-heat oven to 375 degrees.  \n2.  Peel, seed, and chop cucumber.  Quarter cherry tomatoes.  Seed yellow pepper and julienne.  Chop shallot and cilantro.  \n3.  Combine cucumber, tomatoes, yellow pepper, shallot, and cilantro.  Toss gently to mix.  \n4.  Whisk together lime juice, 2 tsp. canola oil, honey, red pepper, and 1 tsp. salt.\n4.  Pour lime juice mixture over cucumber salad, and mix to coat evenly.  \n5.  Sprinkle salmon with salt and pepper to taste.  Heat remaining oil in large non-stick pan.  \n6.  Cook salmon skin side down until skin is crisp.  \n7.  Remove from pan and place in oven in oven safe pan.  Cook until salmon is cooked through, roughly 8-10 minutes.  \n8.  Remove from oven, serve with cucumber salsa."
+                                            andDirections:@"1.  Pre-heat oven to 375 degrees.  \n\n2.  Peel, seed, and chop cucumber.  Quarter cherry tomatoes.  Seed yellow pepper and julienne.  Chop shallot and cilantro.  \n\n3.  Combine cucumber, tomatoes, yellow pepper, shallot, and cilantro.  Toss gently to mix.  \n\n4.  Whisk together lime juice, 2 tsp. canola oil, honey, red pepper, and 1 tsp. salt.\n\n4.  Pour lime juice mixture over cucumber salad, and mix to coat evenly.  \n\n5.  Sprinkle salmon with salt and pepper to taste.  Heat remaining oil in large non-stick pan.  \n\n6.  Cook salmon skin side down until skin is crisp.  \n\n7.  Remove from pan and place in oven in oven safe pan.  Cook until salmon is cooked through, roughly 8-10 minutes.  \n\n8.  Remove from oven, serve with cucumber salsa."
                                              andImageName:@"salmoncucumber.jpg"];
     
     
@@ -207,7 +216,7 @@
 
     Recipes *fifthRecipe = [[Recipes alloc] initWithName:@"Caesar Salad"
                                           andIngredients:ingredientList
-                                           andDirections:@"1.  Chop tomatoes and lettuce.  \n2.  Grill chicken.  \n3.  ??? \n4.  Profit"
+                                           andDirections:@"1.  Chop tomatoes and lettuce.  \n\n2.  Grill chicken.  \n\n3.  ??? \n\n4.  Profit"
                                             andImageName:@"caesar.jpg"];
     
     
@@ -234,7 +243,7 @@
     
     Recipes *sixthRecipe = [[Recipes alloc] initWithName:@"Pan Seared Salmon"
                                           andIngredients:ingredientList
-                                           andDirections:@"1.  Sprinkle salmon with salt and pepper to taste.  Heat remaining oil in large non-stick pan.  \n2.  Cook salmon skin side down until skin is crisp.  \n3.  Remove from pan and place in oven in oven safe pan.  Cook until salmon is cooked through, roughly 8-10 minutes.  \n4.  While salmon is cooking, combine soy sauce, vinegar, and juice from half a lime for dipping sauce."
+                                           andDirections:@"1.  Sprinkle salmon with salt and pepper to taste.  Heat remaining oil in large non-stick pan.  \n\n2.  Cook salmon skin side down until skin is crisp.  \n\n3.  Remove from pan and place in oven in oven safe pan.  Cook until salmon is cooked through, roughly 8-10 minutes.  \n\n4.  While salmon is cooking, combine soy sauce, vinegar, and juice from half a lime for dipping sauce."
                                             andImageName:@"searedsalmon.jpg"];
     
     
@@ -259,7 +268,7 @@
     
     Recipes *seventhRecipe = [[Recipes alloc] initWithName:@"Steak"
                                             andIngredients:ingredientList
-                                             andDirections:@"1.  Pre-heat oven to 400 degrees.  \n2.  Sprinkle salt and pepper on both sides of  steak to taste.  \n3.  Heat oil in non-stick oven-safe pan over high heat until shimmering.  \n4.  Sear steak on both sides, roughly 2 minutes each.  \n5.  Remove pan from heat.  \n6.  Crush garlic, and place butter and garlic on top of steak.  \n7.  Finish steak in oven to desired doneness."
+                                             andDirections:@"1.  Pre-heat oven to 400 degrees.  \n\n2.  Sprinkle salt and pepper on both sides of  steak to taste.  \n\n3.  Heat oil in non-stick oven-safe pan over high heat until shimmering.  \n\n4.  Sear steak on both sides, roughly 2 minutes each.  \n\n5.  Remove pan from heat.  \n\n6.  Crush garlic, and place butter and garlic on top of steak.  \n\n7.  Finish steak in oven to desired doneness."
                                               andImageName:@"steak.jpeg"];
     
     Ingredient *brusselSprouts = [[Ingredient alloc] initWithName:@"Brussel Sprouts"
@@ -285,7 +294,7 @@
     
     Recipes *eighthRecipe = [[Recipes alloc] initWithName:@"Brussel Sprouts w/ Bacon and Maple Glaze"
                                             andIngredients:ingredientList
-                                             andDirections:@"1.  Pre-heat oven to 425 degrees.  \n2.  Quarter the brussel sprouts then coat with canola oil.  Season with salt and pepper.  \n3.  Chop bacon roughly.  Combine with brussel sprouts and mix.  \n4.  Roast in oven for roughly 20-25 minutes, until sprouts are cooked and bacon is crispy.  \n5.  Remove from oven, pour maple syrup over sprouts and mix to coat."
+                                             andDirections:@"1.  Pre-heat oven to 425 degrees.  \n\n2.  Quarter the brussel sprouts then coat with canola oil.  Season with salt and pepper.  \n\n3.  Chop bacon roughly.  Combine with brussel sprouts and mix.  \n\n4.  Roast in oven for roughly 20-25 minutes, until sprouts are cooked and bacon is crispy.  \n\n5.  Remove from oven, pour maple syrup over sprouts and mix to coat."
                                              andImageName:@"brusselsprouts.jpg"];
     
     
@@ -309,7 +318,7 @@
     
     Recipes *ninthRecipe = [[Recipes alloc] initWithName:@"Ice Cream w/ Bananas in Caramel Sauce"
                                            andIngredients:ingredientList
-                                            andDirections:@"1.  Peal and halve, lengthwise, the bananas.  \n2.  Melt butter in large skillet over medium heat.  Stir in sugar and cook, until sugar is melted and light brown.  \n3.  Slowly stir in cream, let boil for 1 minute.  \n4.  Place bananas in pan and cook until heated through, about 2 minutes.  \n5.  Serve over vanilla ice cream."
+                                            andDirections:@"1.  Peal and halve, lengthwise, the bananas.  \n\n2.  Melt butter in large skillet over medium heat.  Stir in sugar and cook, until sugar is melted and light brown.  \n\n3.  Slowly stir in cream, let boil for 1 minute.  \n\n4.  Place bananas in pan and cook until heated through, about 2 minutes.  \n\n5.  Serve over vanilla ice cream."
                                             andImageName:@"bananasicecream.jpg"];
     
     self.recipeList = [[NSArray alloc] initWithObjects:firstRecipe, secondRecipe, thirdRecipe, fourthRecipe, fifthRecipe, sixthRecipe, seventhRecipe, eighthRecipe, ninthRecipe, nil];
@@ -416,7 +425,7 @@
     }
     if ([segue.identifier isEqualToString:@"fancyView"]) {
         NSIndexPath *indexPath=[self.myTableView indexPathForSelectedRow];
-        RecipeTableViewController *destination=segue.destinationViewController;
+        ParallaxRecipeTableViewController *destination=segue.destinationViewController;
         destination.recipeDetails=self.recipeList[indexPath.row];
     }
 

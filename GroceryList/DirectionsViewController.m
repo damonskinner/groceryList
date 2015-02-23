@@ -6,17 +6,17 @@
 //  Copyright (c) 2015 Damon Skinner. All rights reserved.
 //
 
-#import "RecipeViewController.h"
+#import "DirectionsViewController.h"
 #import "Ingredient.h"
 
 
-@interface RecipeViewController ()
+@interface DirectionsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextView *directionsLabel;
 
 @end
 
-@implementation RecipeViewController
+@implementation DirectionsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

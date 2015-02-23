@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIStepper *addGroceryQuantity;
 @property (weak, nonatomic) IBOutlet UIPickerView *addGroceryMetric;
 @property (weak, nonatomic) IBOutlet UILabel *addGroceryQuantityLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *background;
 
 @property (strong, nonatomic) NSArray *arrayMetric;
 
@@ -32,7 +33,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view
     self.addGroceryName.delegate = self;
-    
+    self.background.image= [UIImage imageNamed: @"scratchybackground.jpg"];
+
     self.arrayMetric = [[NSArray alloc] initWithObjects:@"---", @"count", @"cup", @"dz.", @"gal.", @"kg.", @"lb.", @"oz.", @"pt.", @"qrt.", @"tbsp.", @"tsp.", nil];
 }
 

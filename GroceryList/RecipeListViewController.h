@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecipeListTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface RecipeListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSArray *recipeList;
 

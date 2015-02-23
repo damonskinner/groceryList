@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Recipes.h"
 
-@interface RecipeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface DirectionsViewController : UIViewController 
 @property (nonatomic, strong) Recipes *recipeDirections;
 
 

@@ -10,7 +10,7 @@
 #import <UIScrollView+APParallaxHeader.h>
 #import "Recipes.h"
 
-@interface RecipeTableViewController : UITableViewController
+@interface ParallaxRecipeTableViewController : UITableViewController
 @property (nonatomic, strong) Recipes *recipeDetails;
 
 @end

@@ -16,7 +16,9 @@
 		367FD2E51A9AC445000A195C /* salmoncucumber.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2DC1A9AC445000A195C /* salmoncucumber.jpg */; };
 		367FD2E61A9AC445000A195C /* searedsalmon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2DD1A9AC445000A195C /* searedsalmon.jpg */; };
 		367FD2E71A9AC445000A195C /* spaghetti.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2DE1A9AC445000A195C /* spaghetti.jpg */; };
-		367FD2EA1A9AC4A1000A195C /* RecipeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FD2E91A9AC4A1000A195C /* RecipeTableViewController.m */; };
+		367FD2EA1A9AC4A1000A195C /* ParallaxRecipeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FD2E91A9AC4A1000A195C /* ParallaxRecipeTableViewController.m */; };
+		367FD2EC1A9AE656000A195C /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2EB1A9AE656000A195C /* images.jpeg */; };
+		367FD2EE1A9AE738000A195C /* scratchybackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 367FD2ED1A9AE738000A195C /* scratchybackground.jpg */; };
 		36BBC9141A94F7CC001BBA5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9131A94F7CC001BBA5F /* main.m */; };
 		36BBC9171A94F7CC001BBA5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9161A94F7CC001BBA5F /* AppDelegate.m */; };
 		36BBC91D1A94F7CC001BBA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36BBC91B1A94F7CC001BBA5F /* Main.storyboard */; };
@@ -24,8 +26,8 @@
 		36BBC9221A94F7CC001BBA5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BBC9201A94F7CC001BBA5F /* LaunchScreen.xib */; };
 		36BBC92E1A94F7CD001BBA5F /* GroceryListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC92D1A94F7CD001BBA5F /* GroceryListTests.m */; };
 		36BBC9391A94F7FD001BBA5F /* Recipes.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9381A94F7FD001BBA5F /* Recipes.m */; };
-		36BBC93C1A951B7B001BBA5F /* RecipeListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC93B1A951B7B001BBA5F /* RecipeListTableViewController.m */; };
-		36BBC9421A952B43001BBA5F /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9411A952B43001BBA5F /* RecipeViewController.m */; };
+		36BBC93C1A951B7B001BBA5F /* RecipeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC93B1A951B7B001BBA5F /* RecipeListViewController.m */; };
+		36BBC9421A952B43001BBA5F /* DirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9411A952B43001BBA5F /* DirectionsViewController.m */; };
 		36BBC9451A953F4B001BBA5F /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BBC9441A953F4B001BBA5F /* Ingredient.m */; };
 		36C49E251A95A2C500B5A899 /* GroceryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C49E241A95A2C500B5A899 /* GroceryListViewController.m */; };
 		A0D84B151A965DDB00606B6D /* AddGroceryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D84B141A965DDB00606B6D /* AddGroceryListViewController.m */; };
@@ -53,8 +55,10 @@
 		367FD2DC1A9AC445000A195C /* salmoncucumber.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = salmoncucumber.jpg; sourceTree = SOURCE_ROOT; };
 		367FD2DD1A9AC445000A195C /* searedsalmon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = searedsalmon.jpg; sourceTree = SOURCE_ROOT; };
 		367FD2DE1A9AC445000A195C /* spaghetti.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spaghetti.jpg; sourceTree = SOURCE_ROOT; };
-		367FD2E81A9AC4A1000A195C /* RecipeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeTableViewController.h; sourceTree = "<group>"; };
-		367FD2E91A9AC4A1000A195C /* RecipeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeTableViewController.m; sourceTree = "<group>"; };
+		367FD2E81A9AC4A1000A195C /* ParallaxRecipeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxRecipeTableViewController.h; sourceTree = "<group>"; };
+		367FD2E91A9AC4A1000A195C /* ParallaxRecipeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxRecipeTableViewController.m; sourceTree = "<group>"; };
+		367FD2EB1A9AE656000A195C /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = SOURCE_ROOT; };
+		367FD2ED1A9AE738000A195C /* scratchybackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scratchybackground.jpg; sourceTree = SOURCE_ROOT; };
 		36BBC90E1A94F7CC001BBA5F /* GroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BBC9121A94F7CC001BBA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36BBC9131A94F7CC001BBA5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,10 +72,10 @@
 		36BBC92D1A94F7CD001BBA5F /* GroceryListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryListTests.m; sourceTree = "<group>"; };
 		36BBC9371A94F7FD001BBA5F /* Recipes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipes.h; sourceTree = "<group>"; };
 		36BBC9381A94F7FD001BBA5F /* Recipes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipes.m; sourceTree = "<group>"; };
-		36BBC93A1A951B7B001BBA5F /* RecipeListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeListTableViewController.h; sourceTree = "<group>"; };
-		36BBC93B1A951B7B001BBA5F /* RecipeListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeListTableViewController.m; sourceTree = "<group>"; };
-		36BBC9401A952B43001BBA5F /* RecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
-		36BBC9411A952B43001BBA5F /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
+		36BBC93A1A951B7B001BBA5F /* RecipeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeListViewController.h; sourceTree = "<group>"; };
+		36BBC93B1A951B7B001BBA5F /* RecipeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeListViewController.m; sourceTree = "<group>"; };
+		36BBC9401A952B43001BBA5F /* DirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionsViewController.h; sourceTree = "<group>"; };
+		36BBC9411A952B43001BBA5F /* DirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsViewController.m; sourceTree = "<group>"; };
 		36BBC9431A953F4B001BBA5F /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredient.h; sourceTree = "<group>"; };
 		36BBC9441A953F4B001BBA5F /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredient.m; sourceTree = "<group>"; };
 		36C49E231A95A2C500B5A899 /* GroceryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryListViewController.h; sourceTree = "<group>"; };
@@ -105,7 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				367FD2D61A9AC445000A195C /* bananasicecream.jpg */,
+				367FD2EB1A9AE656000A195C /* images.jpeg */,
 				367FD2D71A9AC445000A195C /* brusselsprouts.jpg */,
+				367FD2ED1A9AE738000A195C /* scratchybackground.jpg */,
 				367FD2D81A9AC445000A195C /* bulgogiplate.JPG */,
 				367FD2D91A9AC445000A195C /* caesar.jpg */,
 				367FD2DA1A9AC445000A195C /* steak.jpeg */,
@@ -120,8 +126,8 @@
 		36BBC9051A94F7CC001BBA5F = {
 			isa = PBXGroup;
 			children = (
-				367FD2E81A9AC4A1000A195C /* RecipeTableViewController.h */,
-				367FD2E91A9AC4A1000A195C /* RecipeTableViewController.m */,
+				367FD2E81A9AC4A1000A195C /* ParallaxRecipeTableViewController.h */,
+				367FD2E91A9AC4A1000A195C /* ParallaxRecipeTableViewController.m */,
 				36BBC9431A953F4B001BBA5F /* Ingredient.h */,
 				36BBC9441A953F4B001BBA5F /* Ingredient.m */,
 				36BBC9371A94F7FD001BBA5F /* Recipes.h */,
@@ -153,10 +159,10 @@
 				36BBC91E1A94F7CC001BBA5F /* Images.xcassets */,
 				36BBC9201A94F7CC001BBA5F /* LaunchScreen.xib */,
 				36BBC9111A94F7CC001BBA5F /* Supporting Files */,
-				36BBC93A1A951B7B001BBA5F /* RecipeListTableViewController.h */,
-				36BBC93B1A951B7B001BBA5F /* RecipeListTableViewController.m */,
-				36BBC9401A952B43001BBA5F /* RecipeViewController.h */,
-				36BBC9411A952B43001BBA5F /* RecipeViewController.m */,
+				36BBC93A1A951B7B001BBA5F /* RecipeListViewController.h */,
+				36BBC93B1A951B7B001BBA5F /* RecipeListViewController.m */,
+				36BBC9401A952B43001BBA5F /* DirectionsViewController.h */,
+				36BBC9411A952B43001BBA5F /* DirectionsViewController.m */,
 				36C49E231A95A2C500B5A899 /* GroceryListViewController.h */,
 				36C49E241A95A2C500B5A899 /* GroceryListViewController.m */,
 				A0D84B131A965DDB00606B6D /* AddGroceryListViewController.h */,
@@ -297,8 +303,10 @@
 				367FD2E01A9AC445000A195C /* brusselsprouts.jpg in Resources */,
 				36BBC91D1A94F7CC001BBA5F /* Main.storyboard in Resources */,
 				36BBC9221A94F7CC001BBA5F /* LaunchScreen.xib in Resources */,
+				367FD2EE1A9AE738000A195C /* scratchybackground.jpg in Resources */,
 				367FD2E51A9AC445000A195C /* salmoncucumber.jpg in Resources */,
 				36BBC91F1A94F7CC001BBA5F /* Images.xcassets in Resources */,
+				367FD2EC1A9AE656000A195C /* images.jpeg in Resources */,
 				367FD2E31A9AC445000A195C /* steak.jpeg in Resources */,
 				367FD2E71A9AC445000A195C /* spaghetti.jpg in Resources */,
 				367FD2E11A9AC445000A195C /* bulgogiplate.JPG in Resources */,
@@ -353,15 +361,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				367FD2EA1A9AC4A1000A195C /* RecipeTableViewController.m in Sources */,
+				367FD2EA1A9AC4A1000A195C /* ParallaxRecipeTableViewController.m in Sources */,
 				A0D84B151A965DDB00606B6D /* AddGroceryListViewController.m in Sources */,
 				36BBC9171A94F7CC001BBA5F /* AppDelegate.m in Sources */,
-				36BBC93C1A951B7B001BBA5F /* RecipeListTableViewController.m in Sources */,
+				36BBC93C1A951B7B001BBA5F /* RecipeListViewController.m in Sources */,
 				36BBC9141A94F7CC001BBA5F /* main.m in Sources */,
 				36BBC9391A94F7FD001BBA5F /* Recipes.m in Sources */,
 				36C49E251A95A2C500B5A899 /* GroceryListViewController.m in Sources */,
 				36BBC9451A953F4B001BBA5F /* Ingredient.m in Sources */,
-				36BBC9421A952B43001BBA5F /* RecipeViewController.m in Sources */,
+				36BBC9421A952B43001BBA5F /* DirectionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

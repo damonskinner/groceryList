@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 Damon Skinner. All rights reserved.
 //
 
-#import "RecipeViewController.h"
-#import "RecipeTableViewController.h"
+#import "DirectionsViewController.h"
+#import "ParallaxRecipeTableViewController.h"
 #import "Ingredient.h"
 
-@interface RecipeTableViewController ()
+@interface ParallaxRecipeTableViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)addToGrocery:(id)sender;
 @property (weak, nonatomic) IBOutlet UISwitch *onOffSwitch;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation RecipeTableViewController
+@implementation ParallaxRecipeTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -144,7 +144,7 @@
     
     if ([segue.identifier isEqualToString:@"directionsSegue"]) {
        
-        RecipeViewController *destination=segue.destinationViewController;
+        DirectionsViewController *destination=segue.destinationViewController;
         destination.recipeDirections=self.recipeDetails;
     }
     
