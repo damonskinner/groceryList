@@ -7,6 +7,7 @@
 //
 
 #import "RecipeListTableViewController.h"
+#import "RecipeTableViewController.h"
 #import "Recipes.h"
 #import "RecipeViewController.h"
 #import "Ingredient.h"
@@ -55,7 +56,8 @@
     
     Recipes *firstRecipe= [[Recipes alloc] initWithName:@"Oven Roasted Chicken"
                                          andIngredients:ingredientList
-                                          andDirections:@"1.  Pre-heat over to 425 degrees.  \n2.  Rub salt and pepper over chicken.  \n3.  Place chicken in baking dish, roast for 15 minutes.\n4.  Pour wine over chicken.  \n5.  Halve lemon and squeeze over chicken.  \n6.  Continue roasting for another 30 minutes."];
+                                          andDirections:@"1.  Pre-heat over to 425 degrees.  \n2.  Rub salt and pepper over chicken.  \n3.  Place chicken in baking dish, roast for 15 minutes.\n4.  Pour wine over chicken.  \n5.  Halve lemon and squeeze over chicken.  \n6.  Continue roasting for another 30 minutes."
+                                           andImageName:@"chicken.jpg"];
     
     
     Ingredient *soySauce = [[Ingredient alloc] initWithName:@"Soy Sauce"
@@ -86,7 +88,8 @@
 
     Recipes *secondRecipe = [[Recipes alloc] initWithName:@"Bulgogi"
                                            andIngredients:ingredientList
-                                            andDirections:@"1.  Slice beef into 1/8 inch slices.  \n2.  Chop green onions, combine with remaining ingredients in mixing bowl.  \n3.  Marinate beef with mixture for at least 30 minutes, preferably overnight. \n4.  Drain beef, stir fry until light brown.  \n5.  Serve over rice."];
+                                            andDirections:@"1.  Slice beef into 1/8 inch slices.  \n2.  Chop green onions, combine with remaining ingredients in mixing bowl.  \n3.  Marinate beef with mixture for at least 30 minutes, preferably overnight. \n4.  Drain beef, stir fry until light brown.  \n5.  Serve over rice."
+                                             andImageName:@"bulgogiplate.jpg"];
     
     
     Ingredient *tomato = [[Ingredient alloc] initWithName:@"Tomato"
@@ -139,7 +142,8 @@
     
     Recipes *thirdRecipe = [[Recipes alloc] initWithName:@"Spaghetti with Meat Sauce"
                                           andIngredients:ingredientList
-                                           andDirections:@"1.  In a large skillet, warm olive oil over low heat; saute onion, garlic and celery until onion is transparent.  \n\n2.  Stir in butter and increase heat to medium; brown beef until no longer pink. Mix in sugar, 1 teaspoon salt, mint and mushrooms; lower heat and stir for about 3 minutes.  \n\n3.  In a large bowl, combine tomato paste and broth; pour liquid and basil to pot. Simmer over very low heat for about 2 hours, stirring occasionally.  \n\n4.  Bring a large pot of water to a vigorous boil with 3 tablespoons salt and 1 teaspoon olive oil. Slip spaghetti into water holding on to ends until strands soften a bit. Cook over high heat for 7 to 8 minutes only. When properly cooked, raw taste should be gone but still have a firm texture.  \n\n5.  When ready to serve, combine pasta with meat sauce; serve on a warmed platter or bowl topped with parsley and Romano cheese."];
+                                           andDirections:@"1.  In a large skillet, warm olive oil over low heat; saute onion, garlic and celery until onion is transparent.  \n\n2.  Stir in butter and increase heat to medium; brown beef until no longer pink. Mix in sugar, 1 teaspoon salt, mint and mushrooms; lower heat and stir for about 3 minutes.  \n\n3.  In a large bowl, combine tomato paste and broth; pour liquid and basil to pot. Simmer over very low heat for about 2 hours, stirring occasionally.  \n\n4.  Bring a large pot of water to a vigorous boil with 3 tablespoons salt and 1 teaspoon olive oil. Slip spaghetti into water holding on to ends until strands soften a bit. Cook over high heat for 7 to 8 minutes only. When properly cooked, raw taste should be gone but still have a firm texture.  \n\n5.  When ready to serve, combine pasta with meat sauce; serve on a warmed platter or bowl topped with parsley and Romano cheese."
+                                            andImageName:@"spaghetti.jpg"];
     
     
     Ingredient *cucumber = [[Ingredient alloc] initWithName:@"Cucumber"
@@ -183,7 +187,8 @@
     
     Recipes *fourthRecipe = [[Recipes alloc] initWithName:@"Seared Salmon with Cilantro Cucumber Salsa"
                                            andIngredients:ingredientList
-                                            andDirections:@"1.  Pre-heat oven to 375 degrees.  \n2.  Peel, seed, and chop cucumber.  Quarter cherry tomatoes.  Seed yellow pepper and julienne.  Chop shallot and cilantro.  \n3.  Combine cucumber, tomatoes, yellow pepper, shallot, and cilantro.  Toss gently to mix.  \n4.  Whisk together lime juice, 2 tsp. canola oil, honey, red pepper, and 1 tsp. salt.\n4.  Pour lime juice mixture over cucumber salad, and mix to coat evenly.  \n5.  Sprinkle salmon with salt and pepper to taste.  Heat remaining oil in large non-stick pan.  \n6.  Cook salmon skin side down until skin is crisp.  \n7.  Remove from pan and place in oven in oven safe pan.  Cook until salmon is cooked through, roughly 8-10 minutes.  \n8.  Remove from oven, serve with cucumber salsa."];
+                                            andDirections:@"1.  Pre-heat oven to 375 degrees.  \n2.  Peel, seed, and chop cucumber.  Quarter cherry tomatoes.  Seed yellow pepper and julienne.  Chop shallot and cilantro.  \n3.  Combine cucumber, tomatoes, yellow pepper, shallot, and cilantro.  Toss gently to mix.  \n4.  Whisk together lime juice, 2 tsp. canola oil, honey, red pepper, and 1 tsp. salt.\n4.  Pour lime juice mixture over cucumber salad, and mix to coat evenly.  \n5.  Sprinkle salmon with salt and pepper to taste.  Heat remaining oil in large non-stick pan.  \n6.  Cook salmon skin side down until skin is crisp.  \n7.  Remove from pan and place in oven in oven safe pan.  Cook until salmon is cooked through, roughly 8-10 minutes.  \n8.  Remove from oven, serve with cucumber salsa."
+                                             andImageName:@"salmoncucumber.jpg"];
     
     
     tomato = [[Ingredient alloc] initWithName:@"Tomato"
@@ -202,7 +207,8 @@
 
     Recipes *fifthRecipe = [[Recipes alloc] initWithName:@"Caesar Salad"
                                           andIngredients:ingredientList
-                                           andDirections:@"1.  Chop tomatoes and lettuce.  \n2.  Grill chicken.  \n3.  ??? \n4.  Profit"];
+                                           andDirections:@"1.  Chop tomatoes and lettuce.  \n2.  Grill chicken.  \n3.  ??? \n4.  Profit"
+                                            andImageName:@"caesar.jpg"];
     
     
     salmon = [[Ingredient alloc] initWithName:@"Salmon Fillet"
@@ -228,7 +234,8 @@
     
     Recipes *sixthRecipe = [[Recipes alloc] initWithName:@"Pan Seared Salmon"
                                           andIngredients:ingredientList
-                                           andDirections:@"1.  Sprinkle salmon with salt and pepper to taste.  Heat remaining oil in large non-stick pan.  \n2.  Cook salmon skin side down until skin is crisp.  \n3.  Remove from pan and place in oven in oven safe pan.  Cook until salmon is cooked through, roughly 8-10 minutes.  \n4.  While salmon is cooking, combine soy sauce, vinegar, and juice from half a lime for dipping sauce."];
+                                           andDirections:@"1.  Sprinkle salmon with salt and pepper to taste.  Heat remaining oil in large non-stick pan.  \n2.  Cook salmon skin side down until skin is crisp.  \n3.  Remove from pan and place in oven in oven safe pan.  Cook until salmon is cooked through, roughly 8-10 minutes.  \n4.  While salmon is cooking, combine soy sauce, vinegar, and juice from half a lime for dipping sauce."
+                                            andImageName:@"searedsalmon.jpg"];
     
     
     
@@ -252,7 +259,8 @@
     
     Recipes *seventhRecipe = [[Recipes alloc] initWithName:@"Steak"
                                             andIngredients:ingredientList
-                                             andDirections:@"1.  Pre-heat oven to 400 degrees.  \n2.  Sprinkle salt and pepper on both sides of  steak to taste.  \n3.  Heat oil in non-stick oven-safe pan over high heat until shimmering.  \n4.  Sear steak on both sides, roughly 2 minutes each.  \n5.  Remove pan from heat.  \n6.  Crush garlic, and place butter and garlic on top of steak.  \n7.  Finish steak in oven to desired doneness."];
+                                             andDirections:@"1.  Pre-heat oven to 400 degrees.  \n2.  Sprinkle salt and pepper on both sides of  steak to taste.  \n3.  Heat oil in non-stick oven-safe pan over high heat until shimmering.  \n4.  Sear steak on both sides, roughly 2 minutes each.  \n5.  Remove pan from heat.  \n6.  Crush garlic, and place butter and garlic on top of steak.  \n7.  Finish steak in oven to desired doneness."
+                                              andImageName:@"steak.jpeg"];
     
     Ingredient *brusselSprouts = [[Ingredient alloc] initWithName:@"Brussel Sprouts"
                                                     andQuantity:@2
@@ -277,7 +285,8 @@
     
     Recipes *eighthRecipe = [[Recipes alloc] initWithName:@"Brussel Sprouts w/ Bacon and Maple Glaze"
                                             andIngredients:ingredientList
-                                             andDirections:@"1.  Pre-heat oven to 425 degrees.  \n2.  Quarter the brussel sprouts then coat with canola oil.  Season with salt and pepper.  \n3.  Chop bacon roughly.  Combine with brussel sprouts and mix.  \n4.  Roast in oven for roughly 20-25 minutes, until sprouts are cooked and bacon is crispy.  \n5.  Remove from oven, pour maple syrup over sprouts and mix to coat."];
+                                             andDirections:@"1.  Pre-heat oven to 425 degrees.  \n2.  Quarter the brussel sprouts then coat with canola oil.  Season with salt and pepper.  \n3.  Chop bacon roughly.  Combine with brussel sprouts and mix.  \n4.  Roast in oven for roughly 20-25 minutes, until sprouts are cooked and bacon is crispy.  \n5.  Remove from oven, pour maple syrup over sprouts and mix to coat."
+                                             andImageName:@"brusselsprouts.jpg"];
     
     
     Ingredient *bananas = [[Ingredient alloc] initWithName:@"Bananas"
@@ -300,7 +309,8 @@
     
     Recipes *ninthRecipe = [[Recipes alloc] initWithName:@"Ice Cream w/ Bananas in Caramel Sauce"
                                            andIngredients:ingredientList
-                                            andDirections:@"1.  Peal and halve, lengthwise, the bananas.  \n2.  Melt butter in large skillet over medium heat.  Stir in sugar and cook, until sugar is melted and light brown.  \n3.  Slowly stir in cream, let boil for 1 minute.  \n4.  Place bananas in pan and cook until heated through, about 2 minutes.  \n5.  Serve over vanilla ice cream."];
+                                            andDirections:@"1.  Peal and halve, lengthwise, the bananas.  \n2.  Melt butter in large skillet over medium heat.  Stir in sugar and cook, until sugar is melted and light brown.  \n3.  Slowly stir in cream, let boil for 1 minute.  \n4.  Place bananas in pan and cook until heated through, about 2 minutes.  \n5.  Serve over vanilla ice cream."
+                                            andImageName:@"bananasicecream.jpg"];
     
     self.recipeList = [[NSArray alloc] initWithObjects:firstRecipe, secondRecipe, thirdRecipe, fourthRecipe, fifthRecipe, sixthRecipe, seventhRecipe, eighthRecipe, ninthRecipe, nil];
     
@@ -397,14 +407,18 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"recipeView"]) {
-        NSIndexPath *indexPath=[self.myTableView indexPathForSelectedRow];
-        RecipeViewController *destination=segue.destinationViewController;
-        destination.recipeDetails=self.recipeList[indexPath.row];
-    } else if ([segue.identifier isEqualToString:@"groceryList"]){
+//    if ([segue.identifier isEqualToString:@"recipeView"]) {
+//        NSIndexPath *indexPath=[self.myTableView indexPathForSelectedRow];
+//        RecipeViewController *destination=segue.destinationViewController;
+//        destination.recipeDetails=self.recipeList[indexPath.row];
+    if ([segue.identifier isEqualToString:@"groceryList"]){
         
     }
-        
+    if ([segue.identifier isEqualToString:@"fancyView"]) {
+        NSIndexPath *indexPath=[self.myTableView indexPathForSelectedRow];
+        RecipeTableViewController *destination=segue.destinationViewController;
+        destination.recipeDetails=self.recipeList[indexPath.row];
+    }
 
     
     

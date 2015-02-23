@@ -10,13 +10,14 @@
 
 @implementation Recipes
 
--(instancetype)initWithName: (NSString *) name andIngredients: (NSArray *)ingredients andDirections:(NSString *)directions{
+-(instancetype)initWithName: (NSString *) name andIngredients: (NSArray *)ingredients andDirections:(NSString *)directions andImageName:(NSString *) imageName {
     self=[super init];
     
     if (self) {
         _name=name;
         _ingredients=ingredients;
         _directions=directions;
+        _imageName=imageName;
     }
     
     return self;
@@ -26,7 +27,7 @@
 
 -(instancetype)init {
     
-    return [self initWithName:@"" andIngredients:[[NSArray alloc] init] andDirections:@""];
+    return [self initWithName:@"" andIngredients:[[NSArray alloc] init] andDirections:@"" andImageName:@""];
 }
 
 @end

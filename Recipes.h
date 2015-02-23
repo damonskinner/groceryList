@@ -12,9 +12,12 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSArray *ingredients;
 @property (nonatomic, strong) NSString *directions;
+@property (nonatomic, strong) NSString *imageName;
+
 //@property (nonatomic, strong) NSArray *recipeList;
 
--(instancetype)initWithName: (NSString *) name andIngredients: (NSArray *) ingredients andDirections: (NSString *) directions;
+-(instancetype)initWithName: (NSString *) name andIngredients: (NSArray *)ingredients andDirections:(NSString *)directions andImageName:(NSString *) imageName;
+
 
 
 @end
