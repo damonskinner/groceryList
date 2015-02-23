@@ -32,7 +32,7 @@
 //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 //    self.groceries = [[defaults objectForKey:@"groceryListDictionary"] mutableCopy];
     
-    
+    self.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"dark_wood.png"]];
     self.myTableView.delegate=self;
     self.myTableView.dataSource=self;
     self.title=@"Grocery List:";

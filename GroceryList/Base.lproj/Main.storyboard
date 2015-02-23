@@ -95,12 +95,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dark_wood.png" translatesAutoresizingMaskIntoConstraints="NO" id="oZG-v9-N9a">
-                                <rect key="frame" x="-246" y="-305" width="587" height="893"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BTo-KW-uQq">
                                 <rect key="frame" x="16" y="79" width="288" height="443"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -131,7 +125,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.42352941179999998" green="0.0" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="f5P-pd-zsl"/>
                     <connections>
@@ -155,12 +149,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dark_wood.png" translatesAutoresizingMaskIntoConstraints="NO" id="doc-5s-KsT">
-                                <rect key="frame" x="-160" y="-182" width="516" height="761"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fIs-Of-YKu">
                                 <rect key="frame" x="16" y="80" width="288" height="450"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -201,7 +189,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.42352941176470588" green="0.0" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="XWt-fZ-4lN">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="rGt-TB-c43">
@@ -231,12 +219,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dark_wood.png" translatesAutoresizingMaskIntoConstraints="NO" id="0mL-cz-ciE">
-                                <rect key="frame" x="0.0" y="0.0" width="331" height="574"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </imageView>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zDb-e2-3ka">
                                 <rect key="frame" x="184" y="186" width="94" height="29"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -296,7 +278,6 @@
                         <outlet property="addGroceryName" destination="WTl-0h-qWQ" id="nFa-8S-dvU"/>
                         <outlet property="addGroceryQuantity" destination="zDb-e2-3ka" id="ihZ-lY-4Sa"/>
                         <outlet property="addGroceryQuantityLabel" destination="lOJ-x6-f28" id="2gb-Zd-b35"/>
-                        <outlet property="background" destination="0mL-cz-ciE" id="hl4-0L-4b8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo4-fA-yNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -315,12 +296,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dark_wood.png" translatesAutoresizingMaskIntoConstraints="NO" id="oba-gR-Mkw">
-                                <rect key="frame" x="-250" y="-335" width="570" height="839"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHd-6y-KDa">
                                 <rect key="frame" x="16" y="35" width="288" height="405"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -337,7 +312,7 @@
                                 <size key="shadowOffset" width="-1" height="2"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.42352941179999998" green="0.0" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="JMC-8V-r0v"/>
@@ -375,7 +350,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dark_wood.png" width="512" height="512"/>
         <image name="scratchybackground.jpg" width="640" height="384"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

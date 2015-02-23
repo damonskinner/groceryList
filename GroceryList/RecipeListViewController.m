@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"View did load");
-    
+    self.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"dark_wood.png"]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

@@ -33,7 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view
     self.addGroceryName.delegate = self;
-
+    self.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"dark_wood.png"]];
     self.arrayMetric = [[NSArray alloc] initWithObjects:@"---", @"count", @"cup", @"dz.", @"gal.", @"kg.", @"lb.", @"oz.", @"pt.", @"qrt.", @"tbsp.", @"tsp.", nil];
     
 }
