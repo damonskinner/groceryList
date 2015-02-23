@@ -173,7 +173,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="done"/>
                                     </textField>
                                     <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eWe-HC-Pmb">
-                                        <rect key="frame" x="0.0" y="148" width="288" height="180"/>
+                                        <rect key="frame" x="0.0" y="148" width="288" height="160"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.2220708928" green="0.0" blue="0.024595381079999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
